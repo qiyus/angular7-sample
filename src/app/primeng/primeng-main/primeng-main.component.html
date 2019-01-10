@@ -1,0 +1,9 @@
+<div class="main-box">
+  <div class="tree-box">
+    <p-tree [value]="features" selectionMode="single" [(selection)]="selectedFeature"
+            (onNodeSelect)="onNodeSelected($event)"></p-tree>
+  </div>
+  <div class="feature-box">
+    <router-outlet></router-outlet>
+  </div>
+</div>

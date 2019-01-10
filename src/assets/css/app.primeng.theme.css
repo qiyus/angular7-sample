@@ -1,0 +1,11 @@
+.ui-table .ui-table-tbody>tr:hover {
+  background-color: #039be5 !important;
+}
+
+.ui-tree.ui-widget {
+  height: 100%;
+}
+
+.ui-treenode-content.ui-treenode-selectable:focus {
+  outline: none;
+}

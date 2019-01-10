@@ -1,0 +1,45 @@
+[
+  {
+    "label": "Dialog",
+    "icon": "fa fa-globe",
+    "data": "/dialog",
+    "expanded": true
+  },
+  {
+    "label": "Dynamic Dialog",
+    "icon": "fa fa-globe",
+    "data": "/dynamicdialog",
+    "expanded": true
+  },
+  {
+    "label": "TabView",
+    "icon": "fa fa-globe",
+    "data": "/tabview",
+    "expanded": true
+  },
+  {
+    "label": "undefined",
+    "icon": "fa fa-globe",
+    "expanded": true
+  },
+  {
+    "label": "undefined",
+    "icon": "fa fa-globe",
+    "expanded": true
+  },
+  {
+    "label": "undefined",
+    "icon": "fa fa-globe",
+    "expanded": true
+  },
+  {
+    "label": "undefined",
+    "icon": "fa fa-globe",
+    "expanded": true
+  },
+  {
+    "label": "undefined",
+    "icon": "fa fa-globe",
+    "expanded": true
+  }
+]

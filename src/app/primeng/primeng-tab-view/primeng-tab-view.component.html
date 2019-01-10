@@ -1,0 +1,11 @@
+<p-tabView [activeIndex]="index" (onChange)="onChange($event)">
+  <p-tabPanel header="Dialogs 1" leftIcon="fa fa-bell-o">
+    <app-primeng-dialogs *ngIf="index===0"></app-primeng-dialogs>
+  </p-tabPanel>
+  <p-tabPanel header="Dialogs 2" leftIcon="fa fa-bookmark-o">
+    <app-primeng-dialogs *ngIf="index===1"></app-primeng-dialogs>
+  </p-tabPanel>
+  <p-tabPanel header="Content" leftIcon="fa fa-camera-retro">
+    <p>Content 3</p>
+  </p-tabPanel>
+</p-tabView>

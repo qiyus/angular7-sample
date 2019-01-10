@@ -1,0 +1,8 @@
+/*高度100%设置*/
+html {
+  height: 100%;
+}
+body {
+  margin: 2em;
+  height: -webkit-calc(100% - 150px);
+}
