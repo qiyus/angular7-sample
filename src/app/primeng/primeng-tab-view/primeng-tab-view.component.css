@@ -1,0 +1,13 @@
+.tab-box {
+  height: 100%;
+  width: 100%;
+}
+
+:host /deep/ .tab-box .ui-tabview.ui-widget-content {
+  height: 100% !important;
+  background-color: #198b83;
+}
+
+:host /deep/ .pi.pi-guard-app {
+  content: url(../../../assets/icon/guard.png);
+}
