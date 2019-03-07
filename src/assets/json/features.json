@@ -18,27 +18,53 @@
     "expanded": true
   },
   {
-    "label": "undefined",
+    "label": "VirtualScroller",
+    "icon": "fa fa-globe",
+    "data": "/virtualScroller",
+    "expanded": true
+  },
+  {
+    "label": "Table",
     "icon": "fa fa-globe",
     "expanded": true
   },
   {
-    "label": "undefined",
+    "label": "Tree table",
     "icon": "fa fa-globe",
     "expanded": true
   },
   {
-    "label": "undefined",
+    "label": "FlexGrid",
     "icon": "fa fa-globe",
     "expanded": true
   },
   {
-    "label": "undefined",
+    "label": "Chart",
     "icon": "fa fa-globe",
     "expanded": true
   },
   {
-    "label": "undefined",
+    "label": "Upload",
+    "icon": "fa fa-globe",
+    "expanded": true
+  },
+  {
+    "label": "Block UI",
+    "icon": "fa fa-globe",
+    "expanded": true
+  },
+  {
+    "label": "Progress bar",
+    "icon": "fa fa-globe",
+    "expanded": true
+  },
+  {
+    "label": "Validation",
+    "icon": "fa fa-globe",
+    "expanded": true
+  },
+  {
+    "label": "Message",
     "icon": "fa fa-globe",
     "expanded": true
   }

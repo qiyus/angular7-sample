@@ -1,13 +1,13 @@
 <div class="tab-box">
   <p-tabView [activeIndex]="index" (onChange)="onChange($event)">
-    <p-tabPanel header="Dialogs 1" leftIcon="fa fa-bell-o">
+    <p-tabPanel header="Car" leftIcon="fa fa-car">
       <app-primeng-dialogs></app-primeng-dialogs>
     </p-tabPanel>
-    <p-tabPanel header="Dialogs 2" leftIcon="fa fa-bookmark-o">
-      <app-primeng-dialogs></app-primeng-dialogs>
+    <p-tabPanel header="Card" leftIcon="fa fa-id-card">
+      <app-task-card></app-task-card>
     </p-tabPanel>
-    <p-tabPanel header="Content" leftIcon="pi pi-guard-app">
-      <p>Content 3</p>
+    <p-tabPanel header="Card box" leftIcon="pi pi-guard-app">
+      <app-task-card-box [title]="'ToDo'" [boxHeight]="'600px'" [cards]="cards"></app-task-card-box>
     </p-tabPanel>
   </p-tabView>
 </div>

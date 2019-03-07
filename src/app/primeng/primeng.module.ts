@@ -12,10 +12,14 @@ import {PrimengDialogComponent} from './primeng-dialog/primeng-dialog.component'
 import {DialogModule} from 'primeng/dialog';
 import {PrimengDynamicDialogComponent} from './primeng-dynamic-dialog/primeng-dynamic-dialog.component';
 import {PrimengDialogsComponent} from './primeng-dialogs/primeng-dialogs.component';
-import { PrimengDynamicDialogsComponent } from './primeng-dynamic-dialogs/primeng-dynamic-dialogs.component';
+import {PrimengDynamicDialogsComponent} from './primeng-dynamic-dialogs/primeng-dynamic-dialogs.component';
 import {DynamicDialogModule} from 'primeng/dynamicdialog';
-import { PrimengTabViewComponent } from './primeng-tab-view/primeng-tab-view.component';
-import {TabViewModule} from 'primeng/primeng';
+import {PrimengTabViewComponent} from './primeng-tab-view/primeng-tab-view.component';
+import {CardModule, TabViewModule} from 'primeng/primeng';
+import {TaskCardComponent} from './task-card/task-card.component';
+import {TaskCardBoxComponent} from './task-card-box/task-card-box.component';
+import {VirtualScrollerModule} from 'primeng/virtualscroller';
+import { ScrumBoardComponent } from './scrum-board/scrum-board.component';
 
 @NgModule({
   imports: [
@@ -29,7 +33,9 @@ import {TabViewModule} from 'primeng/primeng';
     TableModule,
     DialogModule,
     DynamicDialogModule,
-    TabViewModule
+    TabViewModule,
+    CardModule,
+    VirtualScrollerModule
   ],
   declarations: [
     PrimengMainComponent,
@@ -37,7 +43,10 @@ import {TabViewModule} from 'primeng/primeng';
     PrimengDialogsComponent,
     PrimengDynamicDialogComponent,
     PrimengDynamicDialogsComponent,
-    PrimengTabViewComponent
+    PrimengTabViewComponent,
+    TaskCardComponent,
+    TaskCardBoxComponent,
+    ScrumBoardComponent
   ],
   entryComponents: [
     PrimengDialogComponent,

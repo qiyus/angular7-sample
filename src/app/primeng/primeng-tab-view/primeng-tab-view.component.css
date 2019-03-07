@@ -9,5 +9,7 @@
 }
 
 :host /deep/ .pi.pi-guard-app {
-  content: url(../../../assets/icon/guard.png);
+  content: url(../../../assets/icon/user.png);
+  width: 16px;
+  height: 16px;
 }

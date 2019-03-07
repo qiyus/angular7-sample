@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-primeng-tab-view',
@@ -8,16 +8,20 @@ import { Component, OnInit } from '@angular/core';
 export class PrimengTabViewComponent implements OnInit {
 
   index: number;
-  constructor() { }
+  cards = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 
-  ngOnInit() {
-    this.index = 1;
-  }
-
-  onChange(event) {
+  static onChange(event) {
     switch (event.index) {
       case 0:
       case 1:
     }
   }
+
+  constructor() {
+  }
+
+  ngOnInit() {
+    this.index = 1;
+  }
+
 }
