@@ -1,0 +1,10 @@
+:host /deep/ .ui-panel .ui-panel-titlebar {
+  background-color: palegoldenrod;
+  font-size: 1em;
+  font-weight: bold;
+  height: 44px;
+}
+
+:host /deep/  .ui-panel .ui-panel-titlebar .ui-panel-title {
+  font-weight: bold;
+}

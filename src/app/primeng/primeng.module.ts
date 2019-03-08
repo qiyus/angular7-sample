@@ -15,11 +15,12 @@ import {PrimengDialogsComponent} from './primeng-dialogs/primeng-dialogs.compone
 import {PrimengDynamicDialogsComponent} from './primeng-dynamic-dialogs/primeng-dynamic-dialogs.component';
 import {DynamicDialogModule} from 'primeng/dynamicdialog';
 import {PrimengTabViewComponent} from './primeng-tab-view/primeng-tab-view.component';
-import {CardModule, TabViewModule} from 'primeng/primeng';
+import {CardModule, ChartModule, PanelModule, TabViewModule} from 'primeng/primeng';
 import {TaskCardComponent} from './task-card/task-card.component';
 import {TaskCardBoxComponent} from './task-card-box/task-card-box.component';
 import {VirtualScrollerModule} from 'primeng/virtualscroller';
-import { ScrumBoardComponent } from './scrum-board/scrum-board.component';
+import {ScrumBoardComponent} from './scrum-board/scrum-board.component';
+import { BurnDownComponent } from './burn-down/burn-down.component';
 
 @NgModule({
   imports: [
@@ -35,7 +36,9 @@ import { ScrumBoardComponent } from './scrum-board/scrum-board.component';
     DynamicDialogModule,
     TabViewModule,
     CardModule,
-    VirtualScrollerModule
+    VirtualScrollerModule,
+    ChartModule,
+    PanelModule
   ],
   declarations: [
     PrimengMainComponent,
@@ -46,7 +49,8 @@ import { ScrumBoardComponent } from './scrum-board/scrum-board.component';
     PrimengTabViewComponent,
     TaskCardComponent,
     TaskCardBoxComponent,
-    ScrumBoardComponent
+    ScrumBoardComponent,
+    BurnDownComponent
   ],
   entryComponents: [
     PrimengDialogComponent,

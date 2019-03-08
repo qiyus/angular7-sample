@@ -20,12 +20,13 @@
   {
     "label": "VirtualScroller",
     "icon": "fa fa-globe",
-    "data": "/virtualScroller",
+    "data": "/board",
     "expanded": true
   },
   {
-    "label": "Table",
+    "label": "Chart",
     "icon": "fa fa-globe",
+    "data": "/chart",
     "expanded": true
   },
   {

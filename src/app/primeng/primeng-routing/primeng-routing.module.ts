@@ -5,6 +5,7 @@ import {PrimengDialogsComponent} from '../primeng-dialogs/primeng-dialogs.compon
 import {PrimengDynamicDialogsComponent} from '../primeng-dynamic-dialogs/primeng-dynamic-dialogs.component';
 import {PrimengTabViewComponent} from '../primeng-tab-view/primeng-tab-view.component';
 import {ScrumBoardComponent} from '../scrum-board/scrum-board.component';
+import {BurnDownComponent} from '../burn-down/burn-down.component';
 
 const routes: Routes = [
   {
@@ -28,8 +29,12 @@ const routes: Routes = [
         component: PrimengTabViewComponent
       },
       {
-        path: 'virtualScroller',
+        path: 'board',
         component: ScrumBoardComponent
+      },
+      {
+        path: 'chart',
+        component: BurnDownComponent
       }
     ]
   }

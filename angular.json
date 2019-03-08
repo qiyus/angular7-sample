@@ -30,7 +30,9 @@
               "src/styles.css",
               "src/assets/css/app.primeng.theme.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/chart.js/dist/Chart.js"
+            ]
           },
           "configurations": {
             "production": {

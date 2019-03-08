@@ -1,0 +1,28 @@
+:host /deep/ .ui-virtualscroller .ui-virtualscroller-header {
+  background-color: palegoldenrod;
+}
+
+:host /deep/ .ui-button.ui-button-icon-only {
+  width: 20px;
+  height: 20px;
+}
+
+.main-box {
+  width: 329px;
+}
+
+.header-box {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.ui-button-card {
+  background-color: #469cff;
+  border: 1px solid #469cff;
+}
+
+.card {
+  padding: 6px 6px 6px 6px;
+}

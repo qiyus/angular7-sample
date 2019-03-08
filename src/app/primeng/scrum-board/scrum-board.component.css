@@ -1,0 +1,5 @@
+.board-box {
+  display: flex;
+  padding: 6px 6px 6px 6px;
+  background-color: lightslategray;
+}

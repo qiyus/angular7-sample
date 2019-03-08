@@ -1,0 +1,20 @@
+<div class="main-box">
+  <p-virtualScroller [value]="cards" [scrollHeight]="boxHeight" [itemSize]="218">
+    <p-header>
+      <div class="header-box">
+        <div class="title-container">
+          {{title}}
+        </div>
+        <div>
+          <button pButton type="button" icon="fa fa-plus" class="ui-button-card"></button>
+        </div>
+      </div>
+    </p-header>
+    <ng-template let-car pTemplate="item" let-i="index">
+      <div class="card">
+        <app-task-card></app-task-card>
+      </div>
+    </ng-template>
+  </p-virtualScroller>
+</div>
+
