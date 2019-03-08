@@ -21,6 +21,7 @@ import {TaskCardBoxComponent} from './task-card-box/task-card-box.component';
 import {VirtualScrollerModule} from 'primeng/virtualscroller';
 import {ScrumBoardComponent} from './scrum-board/scrum-board.component';
 import { BurnDownComponent } from './burn-down/burn-down.component';
+import { DialogExtensionDirective } from './dialog-extension.directive';
 
 @NgModule({
   imports: [
@@ -50,7 +51,8 @@ import { BurnDownComponent } from './burn-down/burn-down.component';
     TaskCardComponent,
     TaskCardBoxComponent,
     ScrumBoardComponent,
-    BurnDownComponent
+    BurnDownComponent,
+    DialogExtensionDirective
   ],
   entryComponents: [
     PrimengDialogComponent,

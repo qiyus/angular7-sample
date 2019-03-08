@@ -1,5 +1,6 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import {Car} from '../car';
+import {DialogExtensionDirective} from '../dialog-extension.directive';
 
 @Component({
   selector: 'app-primeng-dialog',
@@ -9,6 +10,7 @@ import {Car} from '../car';
 export class PrimengDialogComponent implements OnInit {
 
   @Output() callBack = new EventEmitter<Car>();
+  @ViewChild(DialogExtensionDirective) dialog: DialogExtensionDirective;
 
   car: Car;
 
@@ -19,6 +21,9 @@ export class PrimengDialogComponent implements OnInit {
 
   ngOnInit() {
     this.display = true;
+    this.dialog.onResize.subscribe((delta) => {
+      console.log(delta);
+    });
   }
 
   setParameter(car: Car) {
