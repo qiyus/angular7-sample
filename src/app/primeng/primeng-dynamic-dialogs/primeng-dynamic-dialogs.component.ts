@@ -1,4 +1,14 @@
-import {Component, ComponentFactoryResolver, OnInit, Type, ViewChild, ViewContainerRef} from '@angular/core';
+import {
+  AfterContentInit,
+  AfterViewInit,
+  Component,
+  ComponentFactoryResolver,
+  ElementRef,
+  OnInit,
+  Type,
+  ViewChild,
+  ViewContainerRef
+} from '@angular/core';
 import {Car} from '../car';
 import {PrimeNgDataService} from '../primeng-data.service';
 import {PrimengDynamicDialogComponent} from '../primeng-dynamic-dialog/primeng-dynamic-dialog.component';
@@ -10,13 +20,15 @@ import {DialogService} from 'primeng/api';
   styleUrls: ['./primeng-dynamic-dialogs.component.css'],
   providers: [DialogService]
 })
-export class PrimengDynamicDialogsComponent implements OnInit {
+export class PrimengDynamicDialogsComponent implements OnInit, AfterViewInit {
 
-  @ViewChild('carDetail', {read: ViewContainerRef}) container: ViewContainerRef;
+  @ViewChild('box') box: ElementRef;
 
   cars: Car[];
 
   cols: any[];
+
+  scrollHeight: 350;
 
   constructor(private dataService: PrimeNgDataService,
               private dialogService: DialogService) {
@@ -34,6 +46,12 @@ export class PrimengDynamicDialogsComponent implements OnInit {
       {field: 'brand', header: 'Brand'},
       {field: 'color', header: 'Color'}
     ];
+  }
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.scrollHeight = this.box.nativeElement.clientHeight;
+    }, 100);
   }
 
   show(car: Car) {

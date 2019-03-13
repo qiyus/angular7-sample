@@ -10,18 +10,11 @@ export class PrimengTabViewComponent implements OnInit {
   index: number;
   cards = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 
-  static onChange(event) {
-    switch (event.index) {
-      case 0:
-      case 1:
-    }
-  }
-
   constructor() {
   }
 
   ngOnInit() {
-    this.index = 1;
+    this.index = 0;
   }
 
 }

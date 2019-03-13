@@ -3,6 +3,15 @@
   width: 100%;
 }
 
+:host /deep/ .ui-tabview .ui-tabview-panels {
+  width: 100% !important;
+  height: 600px !important;
+}
+
+:host /deep/ .ui-tabview .ui-tabview-panels .ui-tabview-panel {
+  height: 100% !important;
+}
+
 :host /deep/ .tab-box .ui-tabview.ui-widget-content {
   height: 100% !important;
   background-color: #198b83;

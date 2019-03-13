@@ -1,27 +1,31 @@
-<p-table [columns]="cols" [value]="cars" [scrollable]="true" scrollHeight="500px" [resizableColumns]="true">
-  <ng-template pTemplate="colgroup" let-columns>
-    <colgroup>
-      <col *ngFor="let col of columns">
-    </colgroup>
-  </ng-template>
-  <ng-template pTemplate="header" let-columns>
-    <tr>
-      <th *ngFor="let col of columns" pResizableColumn>
-        {{col.header}}
-      </th>
-    </tr>
-  </ng-template>
-  <ng-template pTemplate="body" let-rowData let-columns="columns">
-    <tr>
-      <td *ngFor="let col of columns" style="text-align: center">
-        <ng-container *ngIf="col.field === 'operation'; else elseBlock">
-          <button type="button" pButton icon="fa fa-map-o" iconPos="left" label="show" (click)="show(rowData)"></button>
-        </ng-container>
-        <ng-template #elseBlock>
-          {{rowData[col.field]}}
-        </ng-template>
-      </td>
-    </tr>
-  </ng-template>
-</p-table>
+<div #box class="main-box">
+  <p-table [columns]="cols" [value]="cars" [scrollable]="true" [scrollHeight]="scrollHeight + 'px'" [style]="{width:'680px'}"
+           [resizableColumns]="true" (sortFunction)="customSort($event)" [customSort]="true">
+    <ng-template pTemplate="colgroup" let-columns>
+      <colgroup>
+        <col *ngFor="let col of columns" [style.width]="col.width">
+      </colgroup>
+    </ng-template>
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th *ngFor="let col of columns" pResizableColumn [pSortableColumn]="col.field" [style.width]="col.width">
+          {{col.header}}
+          <p-sortIcon [field]="col.field"></p-sortIcon>
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+      <tr>
+        <td *ngFor="let col of columns" [ngStyle]="{'text-align': 'center', 'width': col.width}">
+          <ng-container *ngIf="col.field === 'operation'; else elseBlock">
+            <button type="button" pButton icon="fa fa-map-o" iconPos="left" label="show" (click)="show(rowData)"></button>
+          </ng-container>
+          <ng-template #elseBlock>
+            {{rowData[col.field]}}
+          </ng-template>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
 <ng-template #carDetail></ng-template>
