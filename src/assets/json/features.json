@@ -24,14 +24,15 @@
     "expanded": true
   },
   {
-    "label": "Chart",
+    "label": "Table Row Expansion",
     "icon": "fa fa-globe",
-    "data": "/chart",
+    "data": "/rowexpansion",
     "expanded": true
   },
   {
-    "label": "Tree table",
+    "label": "Table Row Group",
     "icon": "fa fa-globe",
+    "data": "/rowgroup",
     "expanded": true
   },
   {

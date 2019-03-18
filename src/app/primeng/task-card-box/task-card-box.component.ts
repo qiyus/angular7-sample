@@ -1,4 +1,5 @@
 import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {Task} from '../task';
 
 @Component({
   selector: 'app-task-card-box',
@@ -12,7 +13,7 @@ export class TaskCardBoxComponent implements OnInit, OnChanges {
   @Input()
   boxHeight: number;
   @Input()
-  cards = [];
+  tasks: Task[];
 
   constructor() {
   }

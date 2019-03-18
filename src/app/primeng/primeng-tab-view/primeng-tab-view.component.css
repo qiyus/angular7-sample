@@ -22,3 +22,10 @@
   width: 16px;
   height: 16px;
 }
+
+:host /deep/ .ui-tabview.ui-tabview-top .ui-tabview-nav li.ui-state-active a .pi.pi-guard-app {
+  content: url(../../../assets/icon/user.png);
+  width: 16px;
+  height: 16px;
+  filter: invert(100%);
+}

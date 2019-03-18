@@ -2,7 +2,8 @@
   background-color: palegoldenrod;
   font-size: 1em;
   font-weight: bold;
-  height: 44px;
+  height: 26px;
+  padding: 0 0 0 6px !important;
 }
 
 :host /deep/  .ui-panel .ui-panel-titlebar .ui-panel-title {

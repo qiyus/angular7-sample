@@ -1,0 +1,198 @@
+[
+  {
+    "id": 1,
+    "priority": 10,
+    "userStory": "作为招聘网站注册用户，我想要查看最近3天发布的招聘信息，以便于我看到最新的招聘信息。",
+    "estimate": 20,
+    "release": "release1",
+    "task": [
+      {
+        "id": 1,
+        "title": "谁要使用这个功能。",
+        "developerId": 1,
+        "description": "由于用户故事的描述信息以传统的手写方式写在纸质卡片上，所以Ron Jeffries(2001)对这三个方面称为3C：卡片(Card)、对话(Conversation)和确认(Confirmation)。",
+        "priority": 10,
+        "estimate": 3
+      },
+      {
+        "id": 2,
+        "title": "需要完成什么样的功能。",
+        "developerId": 1,
+        "description": "作为招聘网站注册用户，我想要查看最近3天发布的招聘信息，以便于我看到最新的招聘信息",
+        "priority": 20,
+        "estimate": 4
+      },
+      {
+        "id": 3,
+        "title": "这个功能带来什么样的价值。",
+        "developerId": 1,
+        "description": "作为一个<角色>, 我想要<功能>, 以便于<商业价值>",
+        "priority": 40,
+        "estimate": 8
+      },
+      {
+        "id": 4,
+        "title": "取得招聘信息",
+        "developerId": 1,
+        "description": "用户故事背后的细节来源于和客户或者产品负责人的交流沟通。",
+        "priority": 10,
+        "estimate": 5
+      },
+      {
+        "id": 5,
+        "title": "价值",
+        "developerId": 1,
+        "description": "事应该很清晰地体现对用户或客户的价值，最好的做法是让客户团队来编写故事。",
+        "priority": 10,
+        "estimate": 7
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "priority": 10,
+    "userStory": "作为访客，我想要查看最近1天发布的招聘信息，以便于我看到最新的招聘信息。",
+    "estimate": 70,
+    "release": "release2",
+    "task": [
+      {
+        "id": 1,
+        "title": "取得招聘信息",
+        "developerId": 1,
+        "description": "后端按照时间、类别取得招聘信息。",
+        "priority": 10,
+        "estimate": 8
+      },
+      {
+        "id": 2,
+        "title": "取得招聘信息",
+        "developerId": 1,
+        "description": "前端利用伪数据完成招聘信息表示页面。",
+        "priority": 10,
+        "estimate": 8
+      },
+      {
+        "id": 3,
+        "title": "取得招聘信息",
+        "developerId": 1,
+        "description": "前端利用伪数据完成招聘信息过滤功能。",
+        "priority": 10,
+        "estimate": 8
+      },
+      {
+        "id": 4,
+        "title": "取得招聘信息",
+        "developerId": 1,
+        "description": "前端利用伪数据完成招聘信息分页功能。",
+        "priority": 10,
+        "estimate": 8
+      },
+      {
+        "id": 5,
+        "title": "取得招聘信息",
+        "developerId": 1,
+        "description": "设计接口和认证方案",
+        "priority": 10,
+        "estimate": 8
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "priority": 40,
+    "userStory": "作为访客，我想要查看招聘信息，以便于我找工作。",
+    "estimate": 20,
+    "release": "release1",
+    "task": [
+      {
+        "id": 1,
+        "title": "取得招聘信息",
+        "developerId": 1,
+        "description": "后端按照时间、类别取得招聘信息。",
+        "priority": 10,
+        "estimate": 8
+      },
+      {
+        "id": 2,
+        "title": "取得招聘信息",
+        "developerId": 1,
+        "description": "前端利用伪数据完成招聘信息表示页面。",
+        "priority": 10,
+        "estimate": 8
+      },
+      {
+        "id": 3,
+        "title": "取得招聘信息",
+        "developerId": 1,
+        "description": "前端利用伪数据完成招聘信息过滤功能。",
+        "priority": 10,
+        "estimate": 8
+      },
+      {
+        "id": 4,
+        "title": "取得招聘信息",
+        "developerId": 1,
+        "description": "前端利用伪数据完成招聘信息分页功能。",
+        "priority": 10,
+        "estimate": 8
+      },
+      {
+        "id": 5,
+        "title": "取得招聘信息",
+        "developerId": 1,
+        "description": "设计接口和认证方案",
+        "priority": 10,
+        "estimate": 8
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "priority": 20,
+    "userStory": "作为访客，我想要查看公司信息，以便于我了解公司信息。<br>必须有业务方向说明。",
+    "estimate": 30,
+    "release": "release2",
+    "task": [
+      {
+        "id": 1,
+        "title": "取得招聘信息",
+        "developerId": 1,
+        "description": "后端按照时间、类别取得招聘信息。",
+        "priority": 10,
+        "estimate": 8
+      },
+      {
+        "id": 2,
+        "title": "取得招聘信息",
+        "developerId": 1,
+        "description": "前端利用伪数据完成招聘信息表示页面。",
+        "priority": 20,
+        "estimate": 3
+      },
+      {
+        "id": 3,
+        "title": "取得招聘信息",
+        "developerId": 1,
+        "description": "前端利用伪数据完成招聘信息过滤功能。",
+        "priority": 40,
+        "estimate": 4
+      },
+      {
+        "id": 4,
+        "title": "取得招聘信息",
+        "developerId": 1,
+        "description": "前端利用伪数据完成招聘信息分页功能。",
+        "priority": 50,
+        "estimate": 8
+      },
+      {
+        "id": 5,
+        "title": "取得招聘信息",
+        "developerId": 1,
+        "description": "设计接口和认证方案",
+        "priority": 90,
+        "estimate": 5
+      }
+    ]
+  }
+]

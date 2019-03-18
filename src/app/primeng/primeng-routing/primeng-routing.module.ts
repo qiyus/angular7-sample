@@ -5,7 +5,8 @@ import {PrimengDialogsComponent} from '../primeng-dialogs/primeng-dialogs.compon
 import {PrimengDynamicDialogsComponent} from '../primeng-dynamic-dialogs/primeng-dynamic-dialogs.component';
 import {PrimengTabViewComponent} from '../primeng-tab-view/primeng-tab-view.component';
 import {ScrumBoardComponent} from '../scrum-board/scrum-board.component';
-import {BurnDownComponent} from '../burn-down/burn-down.component';
+import {SprintBacklogComponent} from '../sprint-backlog/sprint-backlog.component';
+import {ProductBacklogComponent} from '../product-backlog/product-backlog.component';
 
 const routes: Routes = [
   {
@@ -33,8 +34,12 @@ const routes: Routes = [
         component: ScrumBoardComponent
       },
       {
-        path: 'chart',
-        component: BurnDownComponent
+        path: 'rowexpansion',
+        component: SprintBacklogComponent
+      },
+      {
+        path: 'rowgroup',
+        component: ProductBacklogComponent
       }
     ]
   }

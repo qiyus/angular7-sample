@@ -2,10 +2,28 @@
   background-color: #039be5 !important;
 }
 
+.ui-table .ui-table-thead > tr > th {
+  background-color: palegoldenrod !important;
+}
+
 .ui-tree.ui-widget {
   height: 100%;
 }
 
 .ui-treenode-content.ui-treenode-selectable:focus {
   outline: none;
+}
+
+.ui-card-title {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.ui-card-body {
+  padding: 10px;
+}
+
+.ui-card-footer {
+  padding-top: 6px;
 }

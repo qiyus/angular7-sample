@@ -4,6 +4,7 @@ import {Observable, of} from 'rxjs';
 import {Car} from './car';
 import {catchError, tap} from 'rxjs/operators';
 import {TreeNode} from 'primeng/api';
+import {SprintBacklog} from './sprint-backlog';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -22,8 +23,17 @@ export class PrimeNgDataService {
   getCarsSmall(): Observable<Car[]> {
     return this.http.get<Car[]>('assets/json/cars-small.json', httpOptions)
       .pipe(
-        tap(cars => this.log(`fetched cars`)),
+        tap(() => this.log(`fetched cars`)),
         catchError(this.handleError('getCarsSmall', []))
+      );
+  }
+
+  /** GET cars from the table */
+  getSprintBacklog(): Observable<SprintBacklog[]> {
+    return this.http.get<SprintBacklog[]>('assets/json/sprint-backlog.json', httpOptions)
+      .pipe(
+        tap(() => this.log(`fetched sprint backlog`)),
+        catchError(this.handleError('getSprintBacklog', []))
       );
   }
 
@@ -31,7 +41,7 @@ export class PrimeNgDataService {
   getFeatures(): Observable<TreeNode[]> {
     return this.http.get<TreeNode[]>('assets/json/features.json', httpOptions)
       .pipe(
-        tap(features => this.log(`fetched features`)),
+        tap(() => this.log(`fetched features`)),
         catchError(this.handleError('getFeatures', []))
       );
   }

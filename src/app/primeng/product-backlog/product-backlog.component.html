@@ -1,0 +1,32 @@
+<div>
+  <p-table [columns]="cols" [value]="backlog">
+    <ng-template pTemplate="colgroup" let-columns>
+      <colgroup>
+        <col *ngFor="let col of columns" [style.width]="col.width">
+      </colgroup>
+    </ng-template>
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th *ngFor="let col of columns" pResizableColumn>
+          <span [innerHtml]="col.header"></span>
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns" let-rowIndex="rowIndex">
+      <tr>
+        <ng-container *ngFor="let col of columns">
+          <ng-container *ngIf="col.field === 'release'; else elseBlock">
+            <td *ngIf="span[rowIndex] > 0" [attr.rowspan]="span[rowIndex]">
+              <span [innerHtml]="rowData[col.field]"></span>
+            </td>
+          </ng-container>
+          <ng-template #elseBlock>
+            <td>
+              <span [innerHtml]="rowData[col.field]"></span>
+            </td>
+          </ng-template>
+        </ng-container>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

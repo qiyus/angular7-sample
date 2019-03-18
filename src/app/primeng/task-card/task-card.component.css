@@ -4,7 +4,7 @@
 }
 
 :host /deep/ .ui-card-content div {
-  height: 86px;
+  height: 128px;
   overflow: hidden;
   display: -webkit-box;
   text-overflow: ellipsis;

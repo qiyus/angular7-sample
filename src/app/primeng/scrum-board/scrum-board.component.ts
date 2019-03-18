@@ -1,4 +1,5 @@
 import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {PrimeNgDataService} from '../primeng-data.service';
 
 @Component({
   selector: 'app-scrum-board',
@@ -9,12 +10,15 @@ export class ScrumBoardComponent implements OnInit, AfterViewInit {
 
   @ViewChild('box') box: ElementRef;
 
-  cards = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+  tasks;
   boxHeight = 500;
 
-  constructor() { }
+  constructor(private dataService: PrimeNgDataService) { }
 
   ngOnInit() {
+    this.dataService.getSprintBacklog().subscribe((backlog) => {
+      this.tasks = backlog[0].task;
+    });
   }
 
   ngAfterViewInit() {
