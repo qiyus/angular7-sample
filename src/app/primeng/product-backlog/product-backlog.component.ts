@@ -39,7 +39,7 @@ export class ProductBacklogComponent implements OnInit {
 
     this.cols = [
       {field: 'release', header: 'Release', width: '150px', textAlign: 'center'},
-      {field: 'index', header: 'No.', width: '80px', textAlign: 'center'},
+      {field: 'reassign', header: 'Reassign.', width: '80px', textAlign: 'center'},
       {field: 'userStory', header: 'User Story', width: 'auto', textAlign: 'left'},
       {field: 'priority', header: 'Priority', width: '150px', textAlign: 'center'},
       {field: 'estimate', header: 'Estimate <br>(Story Point)', width: '150px', textAlign: 'center'},

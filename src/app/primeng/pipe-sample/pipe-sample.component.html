@@ -1,0 +1,137 @@
+<div class="main-box">
+  <h2>Angular 2 管道使用示例</h2>
+  <a href="https://angular.io/api/common/">https://angular.io/api/common/</a>
+  <h3>大写转换</h3>
+  <div class="sub-box">
+    <pre>
+    <code class="language-markup" pCode ngNonbindable>
+      &lt;p&gt;{{ 'Angular' | uppercase }}&lt;/p&gt;
+    </code>
+    </pre>
+    <p>输出：<br></p>
+    <p>{{ 'Angular' | uppercase }}</p>
+  </div>
+
+  <h3>小写转换</h3>
+  <div class="sub-box">
+    <pre>
+    <code class="language-markup" pCode ngNonBindable>
+      &lt;p&gt;{{ 'Angular' | lowercase }}&lt;/p&gt;
+    </code>
+    </pre>
+    <p>输出：<br></p>
+    <p>{{ 'Angular' | lowercase }}</p>
+  </div>
+
+  <h3>数值格式化</h3>
+  <div class="sub-box">
+    <pre>
+    <code class="language-markup" pCode ngNonBindable>
+      &lt;p&gt;{{ 3.1415 | number: '1.1-8' }}&lt;/p&gt;
+      &lt;p&gt;{{ 3.1415 | number: '1.2-3' }}&lt;/p&gt;
+      &lt;p&gt;{{ 3.1415 | number: '1.5-5' }}&lt;/p&gt;
+    </code>
+    </pre>
+    <p>输出：<br></p>
+    <p>{{ 3.1415 | number: '1.1-8' }} | {{ 3.1415 | number: '1.2-3' }} | {{ 3.1415 | number: '1.5-5' }}</p>
+  </div>
+
+  <h3>日期格式化</h3>
+  <div class="sub-box">
+    <pre>
+    <code class="language-markup" pCode ngNonBindable>
+      &lt;p&gt;'shortTime':{{ today | date: 'shortTime'}}&lt;/p&gt;
+      &lt;p&gt;'longTime':{{ today | date: 'longTime' }}&lt;/p&gt;
+      &lt;p&gt;'longDate'{{ today | date: 'longDate' }}&lt;/p&gt;
+      &lt;p&gt;{{ today | date: 'yyyy:MM:dd hh:mm:ss' }}&lt;/p&gt;
+      &lt;p&gt;{{ today | date: 'MM:dd:yyyy hh:mm:ss' }}&lt;/p&gt;
+    </code>
+    </pre>
+    <p>输出：<br></p>
+    <p>
+      'shortTime':{{ today | date: 'shortTime' }} <br>
+      'longTime':{{ today | date: ['longDate', 'longTime'] }} <br>
+      'longDate':{{ today | date: 'longDate' }} <br>
+    </p>
+
+    <ng-container [ngSwitch]="isEnglish">
+      <span *ngSwitchCase="true">'english time':{{ today | date: 'MM:dd:yyyy hh:mm' }}  </span>
+      <span *ngSwitchDefault>'japanese time':{{ today | date: 'yyyy:MM:dd hh:mm' }}  </span>
+    </ng-container>
+
+  </div>
+
+  <h3>异步订阅</h3>
+  <div class="sub-box">
+    <pre>
+    <code class="language-markup" pCode ngNonBindable>
+      &lt;p&gt;{{ greeting | async }}&lt;/p&gt;
+    </code>
+    </pre>
+    <br>
+    <p-toggleButton onLabel="Arrived" offLabel="Reset"
+                    onIcon="fa fa-envelope" offIcon="fa fa-eraser" [(ngModel)]="arrived"
+                    (onChange)="onChangeArrived()"></p-toggleButton>
+    <p>输出：<br></p>
+    <p>
+      {{ greeting | async }} <br>
+    </p>
+  </div>
+
+  <h3>JavaScript 对象序列化</h3>
+  <div class="sub-box">
+    <pre>
+    <code class="language-markup" pCode ngNonBindable>
+      &lt;p&gt;{{ { name: 'Vector', age: 30 } | json }}&lt;/p&gt;
+    </code>
+    </pre>
+    <p>输出：<br></p>
+    <p>{{ { name: 'Vector', age: 30 } | json }}</p>
+  </div>
+
+  <h3>将值映射到字符串</h3>
+  <div class="sub-box">
+    <pre>
+    <code class="language-javascript" pCode ngNonBindable>
+      handleClick() &#123;
+        const index = this.messages.length + 1;
+        this.messages.push(`message $&#123;index&#125;`);
+        this.messageMapping = &#123;
+          '=0': 'No message.',
+          'other': `Total $&#123;index&#125;`
+        };
+      &#125;
+    </code>
+    </pre>
+    <pre>
+    <code class="language-markup" pCode ngNonBindable>
+      &lt;p&gt;{{ messages.length | i18nPlural: messageMapping }}&lt;/p&gt;
+    </code>
+    </pre>
+    <br>
+    <button pButton type="button" icon="fa fa-plus" iconPos="left" label="Add message"
+            (click)="handleClick($event)"></button>
+    <p>输出：<br></p>
+    <p *ngFor="let message of messages">{{message}}<br></p>
+    <p style="color: red">{{ messages.length | i18nPlural: messageMapping }}</p>
+  </div>
+
+  <h3>管道链</h3>
+  <div class="sub-box">
+    <pre>
+    <code class="language-markup" pCode ngNonBindable>
+      &lt;p&gt;{{ 'vector hugo' | slice:0:6 | titlecase }}&lt;/p&gt;
+    </code>
+    </pre>
+    <p>输出：<br></p>
+    <p>{{ 'Vector Hugo' | slice:0:6 | titlecase }}</p>
+  </div>
+
+  <h3>管道分类</h3>
+  <div class="sub-box">
+    <p>
+      pure 管道：仅当管道输入值变化的时候，才执行转换操作，默认的类型是 pure 类型。<br>
+      impure 管道：在每次变化检测期间都会执行，如鼠标点击或移动都会执行 impure 管道
+    </p>
+  </div>
+</div>

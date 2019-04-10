@@ -15,7 +15,7 @@ import {PrimengDialogsComponent} from './primeng-dialogs/primeng-dialogs.compone
 import {PrimengDynamicDialogsComponent} from './primeng-dynamic-dialogs/primeng-dynamic-dialogs.component';
 import {DynamicDialogModule} from 'primeng/dynamicdialog';
 import {PrimengTabViewComponent} from './primeng-tab-view/primeng-tab-view.component';
-import {CardModule, ChartModule, PanelModule, TabViewModule} from 'primeng/primeng';
+import {CardModule, ChartModule, CodeHighlighterModule, PanelModule, TabViewModule, ToggleButtonModule} from 'primeng/primeng';
 import {TaskCardComponent} from './task-card/task-card.component';
 import {TaskCardBoxComponent} from './task-card-box/task-card-box.component';
 import {VirtualScrollerModule} from 'primeng/virtualscroller';
@@ -24,6 +24,8 @@ import { BurnDownComponent } from './burn-down/burn-down.component';
 import { DialogExtensionDirective } from './dialog-extension.directive';
 import { SprintBacklogComponent } from './sprint-backlog/sprint-backlog.component';
 import { ProductBacklogComponent } from './product-backlog/product-backlog.component';
+import { BrPipe } from './br.pipe';
+import { PipeSampleComponent } from './pipe-sample/pipe-sample.component';
 
 @NgModule({
   imports: [
@@ -41,7 +43,9 @@ import { ProductBacklogComponent } from './product-backlog/product-backlog.compo
     CardModule,
     VirtualScrollerModule,
     ChartModule,
-    PanelModule
+    PanelModule,
+    CodeHighlighterModule,
+    ToggleButtonModule
   ],
   declarations: [
     PrimengMainComponent,
@@ -56,7 +60,9 @@ import { ProductBacklogComponent } from './product-backlog/product-backlog.compo
     BurnDownComponent,
     DialogExtensionDirective,
     SprintBacklogComponent,
-    ProductBacklogComponent
+    ProductBacklogComponent,
+    BrPipe,
+    PipeSampleComponent
   ],
   entryComponents: [
     PrimengDialogComponent,

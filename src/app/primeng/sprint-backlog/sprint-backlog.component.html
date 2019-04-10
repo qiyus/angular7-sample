@@ -19,7 +19,7 @@
           </a>
         </td>
         <td *ngFor="let col of columns" [ngStyle]="{width: col.width, 'text-align': col.textAlign}">
-          <span [innerHtml]="rowData[col.field]"></span>
+          <p [innerHtml]="rowData[col.field] | br"></p>
         </td>
       </tr>
     </ng-template>

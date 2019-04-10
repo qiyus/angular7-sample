@@ -7,6 +7,7 @@ import {PrimengTabViewComponent} from '../primeng-tab-view/primeng-tab-view.comp
 import {ScrumBoardComponent} from '../scrum-board/scrum-board.component';
 import {SprintBacklogComponent} from '../sprint-backlog/sprint-backlog.component';
 import {ProductBacklogComponent} from '../product-backlog/product-backlog.component';
+import {PipeSampleComponent} from '../pipe-sample/pipe-sample.component';
 
 const routes: Routes = [
   {
@@ -40,6 +41,10 @@ const routes: Routes = [
       {
         path: 'rowgroup',
         component: ProductBacklogComponent
+      },
+      {
+        path: 'code',
+        component: PipeSampleComponent
       }
     ]
   }

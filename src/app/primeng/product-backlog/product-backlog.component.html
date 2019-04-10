@@ -17,12 +17,12 @@
         <ng-container *ngFor="let col of columns">
           <ng-container *ngIf="col.field === 'release'; else elseBlock">
             <td *ngIf="span[rowIndex] > 0" [attr.rowspan]="span[rowIndex]">
-              <span [innerHtml]="rowData[col.field]"></span>
+              <p [innerHtml]="rowData[col.field]"></p>
             </td>
           </ng-container>
           <ng-template #elseBlock>
             <td>
-              <span [innerHtml]="rowData[col.field]"></span>
+              <p [innerHtml]="rowData[col.field] | br"></p>
             </td>
           </ng-template>
         </ng-container>

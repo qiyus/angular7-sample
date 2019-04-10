@@ -10,6 +10,6 @@ describe('Task', () => {
       id: undefined,
       title: undefined,
       priority: 10};
-    expect(task.priority).toBeTruthy();
+    expect(task.priority).toBe(10);
   });
 });

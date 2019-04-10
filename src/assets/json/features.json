@@ -1,47 +1,54 @@
 [
   {
     "label": "Dialog",
-    "icon": "fa fa-globe",
+    "icon": "fa fa-window-maximize",
     "data": "/dialog",
     "expanded": true
   },
   {
     "label": "Dynamic Dialog",
-    "icon": "fa fa-globe",
+    "icon": "fa fa-object-ungroup",
     "data": "/dynamicdialog",
     "expanded": true
   },
   {
     "label": "TabView",
-    "icon": "fa fa-globe",
+    "icon": "fa fa-columns",
     "data": "/tabview",
     "expanded": true
   },
   {
     "label": "VirtualScroller",
-    "icon": "fa fa-globe",
+    "icon": "fa fa-th",
     "data": "/board",
     "expanded": true
   },
   {
     "label": "Table Row Expansion",
-    "icon": "fa fa-globe",
+    "icon": "fa fa-th-list",
     "data": "/rowexpansion",
     "expanded": true
   },
   {
     "label": "Table Row Group",
-    "icon": "fa fa-globe",
+    "icon": "fa fa-object-group",
     "data": "/rowgroup",
     "expanded": true
   },
   {
-    "label": "FlexGrid",
-    "icon": "fa fa-globe",
+    "label": "CodeHighlighter",
+    "icon": "fa fa-code",
+    "data": "/code",
     "expanded": true
   },
   {
-    "label": "Chart",
+    "label": "Drag&Drop",
+    "icon": "fa fa-globe",
+    "data": "/drag",
+    "expanded": true
+  },
+  {
+    "label": "Tree Table",
     "icon": "fa fa-globe",
     "expanded": true
   },

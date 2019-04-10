@@ -1,0 +1,18 @@
+.main-box {
+  margin: 6px 6px 6px 16px;
+}
+
+.sub-box {
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+:host /deep/ pre[class*="language-"] {
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+
+:host /deep/ code[class*="language-"], pre[class*="language-"] {
+  line-height: 1 !important;
+}
