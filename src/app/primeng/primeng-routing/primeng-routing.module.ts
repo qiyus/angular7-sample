@@ -8,6 +8,7 @@ import {ScrumBoardComponent} from '../scrum-board/scrum-board.component';
 import {SprintBacklogComponent} from '../sprint-backlog/sprint-backlog.component';
 import {ProductBacklogComponent} from '../product-backlog/product-backlog.component';
 import {PipeSampleComponent} from '../pipe-sample/pipe-sample.component';
+import {PromiseSampleComponent} from '../promise-sample/promise-sample.component';
 
 const routes: Routes = [
   {
@@ -45,6 +46,10 @@ const routes: Routes = [
       {
         path: 'code',
         component: PipeSampleComponent
+      },
+      {
+        path: 'message',
+        component: PromiseSampleComponent
       }
     ]
   }

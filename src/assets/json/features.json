@@ -42,6 +42,12 @@
     "expanded": true
   },
   {
+    "label": "Message",
+    "icon": "fa fa-spinner",
+    "data": "/message",
+    "expanded": true
+  },
+  {
     "label": "Drag&Drop",
     "icon": "fa fa-globe",
     "data": "/drag",

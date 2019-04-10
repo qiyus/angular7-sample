@@ -23,13 +23,13 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/font-awesome/css/font-awesome.min.css",
-              "node_modules/primeicons/primeicons.css",
-              "node_modules/primeng/resources/themes/nova-light/theme.css",
-              "node_modules/primeng/resources/primeng.min.css",
-              "node_modules/prismjs/themes/prism.css",
-              "src/styles.css",
-              "src/assets/css/app.primeng.theme.css"
+              "./node_modules/font-awesome/css/font-awesome.min.css",
+              "./node_modules/primeicons/primeicons.css",
+              "./node_modules/primeng/resources/themes/nova-light/theme.css",
+              "./node_modules/primeng/resources/primeng.min.css",
+              "./node_modules/prismjs/themes/prism.css",
+              "./src/styles.css",
+              "./src/assets/css/app.primeng.theme.css"
             ],
             "scripts": [
               "node_modules/chart.js/dist/Chart.js",
