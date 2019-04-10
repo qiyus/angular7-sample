@@ -48,8 +48,8 @@
       &#125;</code>
   </pre>
   <p-messages [(value)]="messages"></p-messages>
-  <button type="button" pButton (click)="handlerResolve()" label="Resolve" style="margin-right: 20px"></button>
-  <button type="button" pButton (click)="handlerReject()" label="Reject" style="margin-right: 20px"></button>
+  <button type="button" pButton (click)="handlerResolve()" label="Resolve" [ngStyle]="{'margin-right.px': 20}"></button>
+  <button type="button" pButton (click)="handlerReject()" label="Reject" [ngStyle]="{'margin-right.px': 20}"></button>
 
   <h3>Promise.all：</h3>
   <p>Promise.all(iterable) 方法返回一个 Promise 实例，此实例在 iterable 参数内所有的 promise 都“完成（resolved）”或参数中不包含 promise 时回调完成（resolve）；<br>
@@ -71,7 +71,7 @@
           &#125;);
         &#125;</code>
   </pre>
-  <button type="button" pButton (click)="handlerAll()" label="All" style="margin-right: 20px"></button>
+  <button type="button" pButton (click)="handlerAll()" label="All" [ngStyle]="{'margin-right.px': 20}"></button>
   <p-message severity="info" [text]="allMessage"></p-message>
 
   <h3>Promise.race：</h3>
@@ -92,7 +92,7 @@
           &#125;);
         &#125;</code>
   </pre>
-  <button type="button" pButton (click)="handlerRace()" label="Race" style="margin-right: 20px"></button>
+  <button type="button" pButton (click)="handlerRace()" label="Race" [ngStyle]="{'margin-right.px': 20}"></button>
   <p-message severity="info" [text]="raceMessage"></p-message>
 
   <h3>await</h3>
@@ -112,6 +112,6 @@
             &#125;);
           &#125;</code>
   </pre>
-  <button type="button" pButton (click)="handlerWait()" label="await" style="margin-right: 20px"></button>
+  <button type="button" pButton (click)="handlerWait()" label="await" [ngStyle]="{'margin-right.px': 20}"></button>
   <p-message severity="info" [text]="waitMessage"></p-message>
 </div>

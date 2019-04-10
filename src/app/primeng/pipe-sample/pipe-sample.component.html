@@ -55,10 +55,14 @@
       'longDate':{{ today | date: 'longDate' }} <br>
     </p>
 
-    <ng-container [ngSwitch]="isEnglish">
-      <span *ngSwitchCase="true">'english time':{{ today | date: 'MM:dd:yyyy hh:mm' }}  </span>
+    <ng-container [ngSwitch]="locale">
+      <span *ngSwitchCase="'english'">'English time':{{ today | date: 'MM:dd:yyyy hh:mm' }}  </span>
+      <span *ngSwitchCase="'japanese'">'Japanese time':{{ today | date: 'yyyy:MM:dd hh:mm' }}  </span>
+      <span *ngSwitchCase="'chinese'">'Chinese time':{{ today | date: 'yyyy:MM:dd hh:mm' }}  </span>
+      <span *ngSwitchCase="'french'">'French time':{{ today | date: 'MM:dd:yyyy hh:mm' }}  </span>
       <span *ngSwitchDefault>'japanese time':{{ today | date: 'yyyy:MM:dd hh:mm' }}  </span>
     </ng-container>
+    <p-splitButton label="Japanese" (onClick)="handleJapanese()" [model]="items"></p-splitButton>
 
   </div>
 

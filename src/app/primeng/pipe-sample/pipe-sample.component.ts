@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {MenuItem} from 'primeng/api';
 
 @Component({
   selector: 'app-pipe-sample',
@@ -8,7 +9,8 @@ import {Component, OnInit} from '@angular/core';
 export class PipeSampleComponent implements OnInit {
 
   today: number = Date.now();
-  isEnglish = true;
+  locale = 'japanese';
+  items: MenuItem[];
 
   messages = [];
   messageMapping: { [k: string]: string } = {
@@ -25,6 +27,23 @@ export class PipeSampleComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.items = [
+      {
+        label: 'English', icon: 'pi pi-refresh', command: () => {
+          this.locale = 'english';
+        }
+      },
+      {
+        label: 'Chinese', icon: 'pi pi-times', command: () => {
+          this.locale = 'chinese';
+        }
+      },
+      {
+        label: 'French', icon: 'pi pi-times', command: () => {
+          this.locale = 'french';
+        }
+      }
+    ];
   }
 
   onChangeArrived() {
@@ -48,5 +67,9 @@ export class PipeSampleComponent implements OnInit {
       '=0': 'No message.',
       'other': `Total ${index}`
     };
+  }
+
+  handleJapanese() {
+    this.locale = 'japanese';
   }
 }

@@ -20,7 +20,7 @@ import {
   ChartModule,
   CodeHighlighterModule, MessageModule,
   MessagesModule,
-  PanelModule,
+  PanelModule, SplitButtonModule,
   TabViewModule,
   ToggleButtonModule
 } from 'primeng/primeng';
@@ -56,7 +56,8 @@ import { PromiseSampleComponent } from './promise-sample/promise-sample.componen
     CodeHighlighterModule,
     ToggleButtonModule,
     MessagesModule,
-    MessageModule
+    MessageModule,
+    SplitButtonModule
   ],
   declarations: [
     PrimengMainComponent,
