@@ -48,6 +48,12 @@
     "expanded": true
   },
   {
+    "label": "Fieldset",
+    "icon": "fa fa-credit-card",
+    "data": "/field",
+    "expanded": true
+  },
+  {
     "label": "Drag&Drop",
     "icon": "fa fa-globe",
     "data": "/drag",
@@ -75,11 +81,6 @@
   },
   {
     "label": "Validation",
-    "icon": "fa fa-globe",
-    "expanded": true
-  },
-  {
-    "label": "Message",
     "icon": "fa fa-globe",
     "expanded": true
   }

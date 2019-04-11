@@ -18,9 +18,12 @@ import {PrimengTabViewComponent} from './primeng-tab-view/primeng-tab-view.compo
 import {
   CardModule,
   ChartModule,
-  CodeHighlighterModule, MessageModule,
+  CodeHighlighterModule,
+  FieldsetModule,
+  MessageModule,
   MessagesModule,
-  PanelModule, SplitButtonModule,
+  PanelModule,
+  SplitButtonModule,
   TabViewModule,
   ToggleButtonModule
 } from 'primeng/primeng';
@@ -28,13 +31,15 @@ import {TaskCardComponent} from './task-card/task-card.component';
 import {TaskCardBoxComponent} from './task-card-box/task-card-box.component';
 import {VirtualScrollerModule} from 'primeng/virtualscroller';
 import {ScrumBoardComponent} from './scrum-board/scrum-board.component';
-import { BurnDownComponent } from './burn-down/burn-down.component';
-import { DialogExtensionDirective } from './dialog-extension.directive';
-import { SprintBacklogComponent } from './sprint-backlog/sprint-backlog.component';
-import { ProductBacklogComponent } from './product-backlog/product-backlog.component';
-import { BrPipe } from './br.pipe';
-import { PipeSampleComponent } from './pipe-sample/pipe-sample.component';
-import { PromiseSampleComponent } from './promise-sample/promise-sample.component';
+import {BurnDownComponent} from './burn-down/burn-down.component';
+import {DialogExtensionDirective} from './dialog-extension.directive';
+import {SprintBacklogComponent} from './sprint-backlog/sprint-backlog.component';
+import {ProductBacklogComponent} from './product-backlog/product-backlog.component';
+import {BrPipe} from './br.pipe';
+import {PipeSampleComponent} from './pipe-sample/pipe-sample.component';
+import {PromiseSampleComponent} from './promise-sample/promise-sample.component';
+import {SubjectSimpleComponent} from './subject-simple/subject-simple.component';
+import {ToastModule} from 'primeng/toast';
 
 @NgModule({
   imports: [
@@ -57,7 +62,9 @@ import { PromiseSampleComponent } from './promise-sample/promise-sample.componen
     ToggleButtonModule,
     MessagesModule,
     MessageModule,
-    SplitButtonModule
+    SplitButtonModule,
+    FieldsetModule,
+    ToastModule
   ],
   declarations: [
     PrimengMainComponent,
@@ -75,7 +82,8 @@ import { PromiseSampleComponent } from './promise-sample/promise-sample.componen
     ProductBacklogComponent,
     BrPipe,
     PipeSampleComponent,
-    PromiseSampleComponent
+    PromiseSampleComponent,
+    SubjectSimpleComponent
   ],
   entryComponents: [
     PrimengDialogComponent,

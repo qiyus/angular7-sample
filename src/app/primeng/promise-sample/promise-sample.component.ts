@@ -1,12 +1,15 @@
 import {Component, OnInit} from '@angular/core';
 import {Message} from 'primeng/api';
-import {async} from 'rxjs/internal/scheduler/async';
 
 @Component({
   selector: 'app-promise-sample',
   templateUrl: './promise-sample.component.html',
   styleUrls: ['./promise-sample.component.css']
 })
+
+/**
+ * Promise实战。
+ */
 export class PromiseSampleComponent implements OnInit {
 
   messages: Message[] = [];
@@ -20,7 +23,10 @@ export class PromiseSampleComponent implements OnInit {
   ngOnInit() {
   }
 
-  handlerResolve() {
+  /**
+   * 模拟异步操作成功
+   */
+  handleResolve() {
     const promise = new Promise<string>((resolve, reject) => {
       // 创建一个异步调用
       setTimeout(() => {
@@ -31,7 +37,10 @@ export class PromiseSampleComponent implements OnInit {
     this.toMessage(promise);
   }
 
-  handlerReject() {
+  /**
+   * 模拟异步操作失败
+   */
+  handleReject() {
     const promise = new Promise<string>((resolve, reject) => {
       // 创建一个异步调用
       setTimeout(() => {
@@ -41,12 +50,15 @@ export class PromiseSampleComponent implements OnInit {
     this.toMessage(promise);
   }
 
-  handlerAll() {
+  /**
+   * iterable 参数内所有的 promise 都完成或任意一个失败。
+   */
+  handleAll() {
     const promise1: Promise<string> = Promise.resolve('promise1');
-    const promise2: Promise<string> = new Promise(function (resolve, reject) {
+    const promise2: Promise<string> = new Promise((resolve, reject) => {
       setTimeout(resolve, 300, 'promise2');
     });
-    const promise3: Promise<string> = new Promise(function (resolve, reject) {
+    const promise3: Promise<string> = new Promise((resolve, reject) => {
       setTimeout(resolve, 100, 'promise3');
     });
 
@@ -57,11 +69,14 @@ export class PromiseSampleComponent implements OnInit {
     });
   }
 
-  handlerRace() {
-    const promise2: Promise<string> = new Promise(function (resolve, reject) {
+  /**
+   * 迭代器中的某个promise解决或拒绝
+   */
+  handleRace() {
+    const promise2: Promise<string> = new Promise((resolve, reject) => {
       setTimeout(resolve, 200, 'promise2');
     });
-    const promise3: Promise<string> = new Promise(function (resolve, reject) {
+    const promise3: Promise<string> = new Promise((resolve, reject) => {
       setTimeout(resolve, 100, 'promise3');
     });
 
@@ -70,11 +85,18 @@ export class PromiseSampleComponent implements OnInit {
     });
   }
 
+  /**
+   * 等待异步处理完成。
+   */
   async handlerWait() {
     const s = await this.resolveAfter2Seconds('Sleep for 2 seconds.');
     this.waitMessage = s.toString();
   }
 
+  /**
+   * 模拟异步处理。
+   * @param x 返回字符串
+   */
   private resolveAfter2Seconds(x) {
     return new Promise(resolve => {
       setTimeout(() => {
@@ -83,6 +105,10 @@ export class PromiseSampleComponent implements OnInit {
     });
   }
 
+  /**
+   * 在message中输出实行结果。
+   * @param promise 被监测的异步操作。
+   */
   toMessage(promise: Promise<string>) {
     promise.then((message) => {
       this.messages = [];

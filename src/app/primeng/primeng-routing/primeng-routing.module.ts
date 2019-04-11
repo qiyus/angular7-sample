@@ -9,6 +9,7 @@ import {SprintBacklogComponent} from '../sprint-backlog/sprint-backlog.component
 import {ProductBacklogComponent} from '../product-backlog/product-backlog.component';
 import {PipeSampleComponent} from '../pipe-sample/pipe-sample.component';
 import {PromiseSampleComponent} from '../promise-sample/promise-sample.component';
+import {SubjectSimpleComponent} from '../subject-simple/subject-simple.component';
 
 const routes: Routes = [
   {
@@ -50,6 +51,10 @@ const routes: Routes = [
       {
         path: 'message',
         component: PromiseSampleComponent
+      },
+      {
+        path: 'field',
+        component: SubjectSimpleComponent
       }
     ]
   }

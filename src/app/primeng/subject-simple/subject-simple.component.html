@@ -1,0 +1,286 @@
+<div class="main-box">
+  <p-toast position="center" key="center"></p-toast>
+  <h3>RxJS - Observable & Subject</h3>
+  <p-fieldset legend="Observable">
+    <p>RxJS 是基于观察者模式和迭代器模式以函数式编程思维来实现的。RxJS 中含有两个基本概念：Observables 与 Observer。<br>
+      Observables 作为被观察者，是一个值或事件的流集合；而 Observer 则作为观察者，根据 Observables 进行处理。</p>
+    <pre>
+      <code class="language-javascript" pCode>
+          handleObservableRun(): void &#123;
+            const observable = take(3)(interval(1000));
+            const observerA = &#123;
+              next: value =&gt; this.messageService.add(&#123;key: 'center', severity: 'success', summary: 'Observer A get value:', detail: value&#125;),
+              error: err =&gt; this.messageService.add(&#123;key: 'center', severity: 'error', summary: 'Observer A get value: ', detail: err&#125;),
+              complete: () =&gt; this.messageService.add(&#123;key: 'center', severity: 'info', summary: 'Observer A get value: ', detail: 'complete'&#125;)
+            &#125;;
+            const observerB = &#123;
+              next: value =&gt; this.messageService.add(&#123;key: 'center', severity: 'success', summary: 'Observer B get value:', detail: value&#125;),
+              error: err =&gt; this.messageService.add(&#123;key: 'center', severity: 'error', summary: 'Observer B get value: ', detail: err&#125;),
+              complete: () =&gt; this.messageService.add(&#123;key: 'center', severity: 'info', summary: 'Observer B get value: ', detail: 'complete'&#125;)
+            &#125;;
+            observable.subscribe(observerA);
+            setTimeout(() =&gt; &#123;
+              observable.subscribe(observerB);
+            &#125;, 1000);
+        &#125;</code>
+    </pre>
+    <button pButton label="Run" icon="pi pi-caret-right" iconPos="left" (click)="handleIntervalRun()"></button>
+    <br><br>
+    <p>通过以上示例，我们可以得出以下结论：</p>
+    <ul>
+      <li>Observable 对象可以被重复订阅</li>
+      <li>Observable 对象每次被订阅后，都会重新执行</li>
+    </ul>
+    <br>
+    <p>RxJS 中提供了很多操作符，用于创建 Observable 对象，常用的操作符如下：</p>
+    <ul>
+      <li>create</li>
+      <li>of</li>
+      <li>from</li>
+      <li>fromEvent</li>
+      <li>fromPromise</li>
+      <li>interval</li>
+      <li>timer</li>
+    </ul>
+
+    <h3>create 操作符</h3>
+    <pre>
+      <code class="language-javascript" pCode>
+        const observable = Observable.create((observer) =&gt; &#123;
+          observer.next('create 1');
+          observer.next('create 2');
+
+          setTimeout(() =&gt; &#123;
+            observer.next('create 3');
+          &#125;, 500);
+        &#125;);
+
+        observable.subscribe(this.observerA);</code>
+    </pre>
+    <button pButton label="Run" icon="pi pi-caret-right" iconPos="left" (click)="handleCreateRun()"></button>
+    <br><br>
+
+    <h3>of 操作符</h3>
+    <pre>
+      <code class="language-javascript" pCode>
+        handleOfRun(): void &#123;
+          const observable = of('1', '2', '3');
+          observable.subscribe(this.observerA);
+        &#125;</code>
+    </pre>
+    <button pButton label="Run" icon="pi pi-caret-right" iconPos="left" (click)="handleOfRun()"></button>
+    <br><br>
+
+    <h3>from 操作符</h3>
+    <pre>
+      <code class="language-javascript" pCode>
+        handleFromRun(): void &#123;
+          const observable = from(['from 1', 'from 2', 'from 3']);
+          observable.subscribe(this.observerA);
+        &#125;</code>
+    </pre>
+    <button pButton label="Run" icon="pi pi-caret-right" iconPos="left" (click)="handleFromRun()"></button>
+    <br><br>
+
+    <h3>fromEvent 操作符</h3>
+    <pre>
+      <code class="language-javascript" pCode>
+        handleFromEventRun(): void &#123;
+          const observable = fromEvent(document.getElementById('fromEventButton'), 'click');
+          const observer: Observer&lt;Event&gt; = &#123;
+            next: event =&gt; this.messageService.add(&#123;
+              key: 'center',
+              severity: 'success',
+              summary: 'From Event: ',
+              detail: event.toString()
+            &#125;),
+            error: err =&gt; this.messageService.add(&#123;key: 'center', severity: 'error', summary: 'From Event: ', detail: err&#125;),
+            complete: () =&gt; this.messageService.add(&#123;key: 'center', severity: 'info', summary: 'From Event ', detail: 'complete'&#125;)
+          &#125;;
+          this.subscriptions.push(observable.subscribe(observer));
+        &#125;</code>
+    </pre>
+    <button pButton label="Run" icon="pi pi-caret-right" iconPos="left" (click)="handleFromEventRun()"></button>
+    <button id="fromEventButton" pButton label="Click" icon="pi pi-key" iconPos="left" [ngStyle]="{'marginLeft.px': 20}"></button>
+    <br><br>
+
+    <h3>fromPromise 操作符</h3>
+    <pre>
+      <code class="language-javascript" pCode>
+        handleFromPromiseRun(): void &#123;
+          const observable = fromPromise(new Promise&lt;string&gt;((resolve) => &#123;
+            setTimeout(() => &#123;
+              resolve('FromPromise complete.');
+            &#125;, 1000);
+          &#125;));
+          this.subscriptions.push(observable.subscribe(this.observerA));
+        &#125;</code>
+    </pre>
+    <button pButton label="Run" icon="pi pi-caret-right" iconPos="left" (click)="handleFromPromiseRun()"></button>
+    <br><br>
+
+    <h3>timer 操作符</h3>
+    <pre>
+      <code class="language-javascript" pCode>
+        handleTimerRun(): void &#123;
+          const observable = take(10)(timer(1000, 300));
+          this.subscriptions.push(observable.subscribe(this.observerA));
+        &#125;</code>
+    </pre>
+    <button pButton label="Run" icon="pi pi-caret-right" iconPos="left" (click)="handleTimerRun()"></button>
+    <br><br>
+
+  </p-fieldset>
+
+  <p-fieldset legend="Subscription">
+    <h3>Subscription</h3>
+    <p>有些时候对于一些 Observable 对象 (如通过 interval、timer 操作符创建的对象)，当我们不需要的时候，要释放相关的资源，以避免资源浪费。<br>
+       针对这种情况，我们可以调用 Subscription 对象的 unsubscribe 方法来释放资源。</p>
+    <pre>
+      <code class="language-javascript" pCode>
+          ngOnDestroy(): void &#123;
+            this.subscriptions.forEach((subscription) =&gt; &#123;
+              subscription.unsubscribe();
+            &#125;);
+          &#125;</code>
+    </pre>
+  </p-fieldset>
+
+  <p-fieldset legend="Observer">
+    <h3>Observer</h3>
+    <p>Observer (观察者) 是一个包含三个方法的对象，每当 Observable 触发事件时，便会自动调用观察者的对应方法。</p>
+    <pre>
+      <code class="language-javascript" pCode>
+          interface Observer&lt;T&gt; &#123;
+            closed?: boolean; // 标识是否已经取消对Observable对象的订阅
+            next: (value: T) =&gt; void;
+            error: (err: any) =&gt; void;
+            complete: () =&gt; void;
+          &#125;</code>
+    </pre>
+    <p>Observer 中的三个方法的作用：</p>
+    <ul>
+      <li>next - 每当 Observable 发送新值的时候，next 方法会被调用</li>
+      <li>error - 当 Observable 内发生错误时，error 方法就会被调用</li>
+      <li>complete - 当 Observable 数据终止后，complete 方法会被调用。</li>
+    </ul>
+  </p-fieldset>
+
+  <p-fieldset legend="Observable vs Promise">
+    <h3>Observable vs Promise</h3>
+    <p>Promise：</p>
+    <ul>
+      <li>返回单个值</li>
+      <li>不可取消的</li>
+    </ul>
+    <br>
+    <p>Observable：</p>
+    <ul>
+      <li>随着时间的推移发出多个值</li>
+      <li>可以取消的</li>
+      <li>支持 map、filter、reduce 等操作符</li>
+      <li>延迟执行，当订阅的时候才会开始执行</li>
+    </ul>
+  </p-fieldset>
+
+  <p-fieldset legend="延迟计算 & 渐进式取值">
+    <p>所有的 Observable 对象一定会等到订阅后，才开始执行，如果没有订阅就不会执行。</p>
+    <pre>
+      <code class="language-javascript" pCode>
+        const observable = take(3)(interval(100)).pipe(
+          map((current) =&gt; &#123;
+            return +current + 10;
+          &#125;),
+          reduce((total, current) =&gt; &#123;
+            return +total + +current;
+          &#125;),
+          filter((current) =&gt; &#123;
+            return +current &gt; 32;
+          &#125;)
+        );
+        this.subscriptions.push(observable.subscribe(&#123;
+          next: value =&gt; this.messageService.add(&#123;
+            key: 'center',
+            severity: 'info',
+            summary: 'Total: ',
+            detail: value.toString()
+          &#125;)
+        &#125;));</code>
+    </pre>
+    <button pButton label="Run" icon="pi pi-caret-right" iconPos="left" (click)="handleSumRun()"></button>
+    <br>
+    <p>虽然 Observable 运算符每次都会返回一个新的 Observable 对象，但每个元素都是渐进式获取的，且每个元素都会经过操作符链的运算后才输出</p>
+  </p-fieldset>
+
+  <p-fieldset legend="Subject">
+    <p>Observable 对象的默认行为，适用于大部分场景。但有些时候，我们会希望在第二次订阅的时候，不会从头开始接收 Observable 发出的值</p>
+    <pre>
+      <code class="language-javascript" pCode>
+      handleSubjectRun(): void &#123;
+        const observable = take(3)(interval(1000));
+        const subject = new Subject();
+        this.subscriptions.push(subject.subscribe(this.observerA));
+        this.subscriptions.push(observable.subscribe(subject));
+        setTimeout(() =&gt; &#123;
+          this.subscriptions.push(subject.subscribe(this.observerB));
+        &#125;, 1000);
+      &#125;  
+      </code>
+    </pre>
+    <button pButton label="Run" icon="pi pi-caret-right" iconPos="left" (click)="handleSubjectRun()"></button>
+  </p-fieldset>
+
+  <p-fieldset legend="BehaviorSubject">
+    <p>每当新增一个观察者的时候，我们希望 Subject 能够立即发出当前最新的值，而不是没有任何响应。</p>
+    <pre>
+      <code class="language-javascript" pCode>
+      handleSubjectRun(): void &#123;
+        const observable = take(2)(interval(1000));
+        const subject = new BehaviorSubject('5');
+        this.subscriptions.push(subject.subscribe(this.observerA));
+        this.subscriptions.push(observable.subscribe(subject));
+        setTimeout(() =&gt; &#123;
+          this.subscriptions.push(subject.subscribe(this.observerB));
+        &#125;, 5000);
+      &#125;
+      </code>
+    </pre>
+    <button pButton label="Run" icon="pi pi-caret-right" iconPos="left" (click)="handleBehaviorSubjectRun()"></button>
+  </p-fieldset>
+
+  <p-fieldset legend="ReplaySubject">
+    <p>有些时候我们希望在 Subject 新增订阅者后，能向新增的订阅者重新发送最后几个值.</p>
+    <pre>
+      <code class="language-javascript" pCode>
+      handleSubjectRun(): void &#123;
+        const observable = take(3)(interval(1000));
+        const subject = new ReplaySubject(2);
+        this.subscriptions.push(subject.subscribe(this.observerA));
+        this.subscriptions.push(observable.subscribe(subject));
+        setTimeout(() =&gt; &#123;
+          this.subscriptions.push(subject.subscribe(this.observerB));
+        &#125;, 5000);
+      &#125;
+      </code>
+    </pre>
+    <button pButton label="Run" icon="pi pi-caret-right" iconPos="left" (click)="handleReplaySubjectRun()"></button>
+  </p-fieldset>
+
+  <p-fieldset legend="AsyncSubject">
+    <p>AsyncSubject 类似于 last 操作符，它会在 Subject 结束后发出最后一个值.</p>
+    <pre>
+      <code class="language-javascript" pCode>
+      handleSubjectRun(): void &#123;
+        const observable = take(2)(interval(1000));
+        const subject = new AsyncSubject();
+        this.subscriptions.push(subject.subscribe(this.observerA));
+        this.subscriptions.push(observable.subscribe(subject));
+        setTimeout(() =&gt; &#123;
+          this.subscriptions.push(subject.subscribe(this.observerB));
+        &#125;, 3000);
+      &#125;
+      </code>
+    </pre>
+    <button pButton label="Run" icon="pi pi-caret-right" iconPos="left" (click)="handleAsyncSubjectRun()"></button>
+  </p-fieldset>
+</div>

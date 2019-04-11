@@ -7,6 +7,11 @@ body {
   height: -webkit-calc(100% - 150px);
 }
 
+.main-box {
+  height: 100%;
+  width: 100%;
+  margin: 6px 6px 6px 16px;
+}
 
 :not(pre) > code[class*=language-], pre[class*=language-] {
   background-color: #fdfdfd !important;
