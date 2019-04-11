@@ -1,5 +1,5 @@
 import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-import {Task} from '../task';
+import {Task} from '../domian/task';
 
 @Component({
   selector: 'app-task-card-box',

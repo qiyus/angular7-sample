@@ -1,5 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {Car} from '../car';
+import {Car} from '../domian/car';
 import {PrimeNgDataService} from '../primeng-data.service';
 import {DynamicDialogConfig, DynamicDialogRef} from 'primeng/api';
 

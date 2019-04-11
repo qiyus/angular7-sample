@@ -1,4 +1,4 @@
-import {ProductBacklog} from './product-backlog';
+import {ProductBacklog} from '../product-backlog';
 
 describe('ProductBacklog', () => {
   it('should create an instance', () => {

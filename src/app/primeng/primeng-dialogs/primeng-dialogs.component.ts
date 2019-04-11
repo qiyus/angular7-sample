@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, ComponentFactoryResolver, ElementRef, OnInit, ViewChild, ViewContainerRef} from '@angular/core';
-import {Car} from '../car';
+import {Car} from '../domian/car';
 import {PrimeNgDataService} from '../primeng-data.service';
 import {Type} from '@angular/core/src/type';
 import {PrimengDialogComponent} from '../primeng-dialog/primeng-dialog.component';

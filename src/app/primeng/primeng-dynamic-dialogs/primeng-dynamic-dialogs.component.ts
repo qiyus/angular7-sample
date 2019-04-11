@@ -9,7 +9,7 @@ import {
   ViewChild,
   ViewContainerRef
 } from '@angular/core';
-import {Car} from '../car';
+import {Car} from '../domian/car';
 import {PrimeNgDataService} from '../primeng-data.service';
 import {PrimengDynamicDialogComponent} from '../primeng-dynamic-dialog/primeng-dynamic-dialog.component';
 import {DialogService} from 'primeng/api';

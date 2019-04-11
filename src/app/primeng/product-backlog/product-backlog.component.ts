@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ProductBacklog} from '../product-backlog';
+import {ProductBacklog} from '../domian/product-backlog';
 import {PrimeNgDataService} from '../primeng-data.service';
 
 @Component({

@@ -1,5 +1,5 @@
 import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
-import {Car} from '../car';
+import {Car} from '../domian/car';
 import {DialogExtensionDirective} from '../dialog-extension.directive';
 
 @Component({

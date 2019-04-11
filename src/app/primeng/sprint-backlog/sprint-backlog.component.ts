@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {PrimeNgDataService} from '../primeng-data.service';
-import {SprintBacklog} from '../sprint-backlog';
+import {SprintBacklog} from '../domian/sprint-backlog';
 
 @Component({
   selector: 'app-sprint-backlog',
