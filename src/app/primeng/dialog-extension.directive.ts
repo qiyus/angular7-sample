@@ -8,17 +8,19 @@ export class DialogExtensionDirective {
 
   onResize = new EventEmitter<object>();
   documentResizeListener: any;
+  interval;
   lastPageX = 0;
   lastPageY = 0;
+  deltaX = 0;
+  deltaY = 0;
 
   constructor(private dialog: Dialog, private zone: NgZone) {
   }
 
   resize(event) {
     if (this.dialog.resizing) {
-      const deltaX = event.pageX - this.lastPageX;
-      const deltaY = event.pageY - this.lastPageY;
-      this.onResize.emit({deltaX: deltaX, deltaY: deltaY});
+      this.deltaX += event.pageX - this.lastPageX;
+      this.deltaY += event.pageY - this.lastPageY;
       this.lastPageX = event.pageX;
       this.lastPageY = event.pageY;
     }
@@ -26,13 +28,16 @@ export class DialogExtensionDirective {
 
   @HostListener('mousedown', ['$event'])
   onMouseDown(event) {
-    if (this.dialog.resizable) {
-      this.zone.runOutsideAngular(() => {
+    if (this.dialog.resizing) {
         this.lastPageX = event.pageX;
         this.lastPageY = event.pageY;
         this.documentResizeListener = this.resize.bind(this);
         window.document.addEventListener('mousemove', this.documentResizeListener);
-      });
+        this.interval = setInterval(() => {
+          this.onResize.emit({x: this.deltaX, y: this.deltaY});
+          this.deltaX = 0;
+          this.deltaY = 0;
+        }, 200);
     }
   }
 
@@ -40,6 +45,7 @@ export class DialogExtensionDirective {
   onMouseUp() {
     if (this.dialog.resizing) {
       window.document.removeEventListener('mousemove', this.documentResizeListener);
+      clearInterval(this.interval);
     }
   }
 }
