@@ -40,6 +40,7 @@ import {PipeSampleComponent} from './pipe-sample/pipe-sample.component';
 import {PromiseSampleComponent} from './promise-sample/promise-sample.component';
 import {SubjectSimpleComponent} from './subject-simple/subject-simple.component';
 import {ToastModule} from 'primeng/toast';
+import { PrimengTableComponent } from './primeng-table/primeng-table.component';
 
 @NgModule({
   imports: [
@@ -83,7 +84,8 @@ import {ToastModule} from 'primeng/toast';
     BrPipe,
     PipeSampleComponent,
     PromiseSampleComponent,
-    SubjectSimpleComponent
+    SubjectSimpleComponent,
+    PrimengTableComponent
   ],
   entryComponents: [
     PrimengDialogComponent,

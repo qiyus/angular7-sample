@@ -1,5 +1,6 @@
 <div #box class="main-box">
-  <p-table [columns]="cols" [value]="cars" [scrollable]="true" [scrollHeight]="scrollHeight + 'px'" [resizableColumns]="true">
+  <p-table [columns]="cols" [value]="cars" [scrollable]="true" [scrollHeight]="scrollHeight + 'px'"
+           [resizableColumns]="true">
     <ng-template pTemplate="colgroup" let-columns>
       <colgroup>
         <col *ngFor="let col of columns">
@@ -16,7 +17,8 @@
       <tr>
         <td *ngFor="let col of columns" style="text-align: center">
           <ng-container *ngIf="col.field === 'operation'; else elseBlock">
-            <button type="button" pButton icon="fa fa-map-o" iconPos="left" label="show" (click)="show(rowData)"></button>
+            <button type="button" pButton icon="fa fa-map-o" iconPos="left" label="show"
+                    (click)="show(rowData)"></button>
           </ng-container>
           <ng-template #elseBlock>
             {{rowData[col.field]}}

@@ -10,6 +10,7 @@ import {ProductBacklogComponent} from '../product-backlog/product-backlog.compon
 import {PipeSampleComponent} from '../pipe-sample/pipe-sample.component';
 import {PromiseSampleComponent} from '../promise-sample/promise-sample.component';
 import {SubjectSimpleComponent} from '../subject-simple/subject-simple.component';
+import {PrimengTableComponent} from '../primeng-table/primeng-table.component';
 
 const routes: Routes = [
   {
@@ -25,11 +26,11 @@ const routes: Routes = [
         component: PrimengDialogsComponent
       },
       {
-        path: 'dynamicdialog',
+        path: 'dynamic',
         component: PrimengDynamicDialogsComponent
       },
       {
-        path: 'tabview',
+        path: 'tab',
         component: PrimengTabViewComponent
       },
       {
@@ -37,11 +38,11 @@ const routes: Routes = [
         component: ScrumBoardComponent
       },
       {
-        path: 'rowexpansion',
+        path: 'sprint',
         component: SprintBacklogComponent
       },
       {
-        path: 'rowgroup',
+        path: 'product',
         component: ProductBacklogComponent
       },
       {
@@ -55,6 +56,10 @@ const routes: Routes = [
       {
         path: 'field',
         component: SubjectSimpleComponent
+      },
+      {
+        path: 'table',
+        component: PrimengTableComponent
       }
     ]
   }

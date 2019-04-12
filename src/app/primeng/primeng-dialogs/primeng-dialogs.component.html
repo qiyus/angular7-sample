@@ -1,5 +1,5 @@
 <div #box class="main-box">
-  <p-table [columns]="cols" [value]="cars" [scrollable]="true" [scrollHeight]="scrollHeight + 'px'" [style]="{width:'680px'}"
+  <p-table [columns]="cols" [value]="cars" [scrollable]="true" [scrollHeight]="scrollHeight + 'px'"
            [resizableColumns]="true" (sortFunction)="customSort($event)" [customSort]="true">
     <ng-template pTemplate="colgroup" let-columns>
       <colgroup>

@@ -1,0 +1,35 @@
+<div class="main-box">
+  <p-table #table [columns]="cols" [value]="sales" [resizableColumns]="true"  [scrollable]="true" [scrollHeight]="'550px'">
+    <ng-template pTemplate="colgroup" let-columns>
+      <colgroup>
+        <col *ngFor="let col of columns" [ngStyle]="{'width': col.width}">
+      </colgroup>
+    </ng-template>
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th rowspan="3" pResizableColumn id="0">Brand</th>
+        <th rowspan="3" pResizableColumn id="1">Year</th>
+        <th colspan="4">State</th>
+      </tr>
+      <tr>
+        <th colspan="2">Sales</th>
+        <th colspan="2">Profits</th>
+      </tr>
+      <tr>
+        <ng-container *ngFor="let col of columns; index as i">
+          <th pResizableColumn *ngIf="i > 1" [id]="i">
+            {{col.field}}
+          </th>
+        </ng-container>
+
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns" let-rowIndex="rowIndex">
+      <tr>
+        <td *ngFor="let col of columns" [ngStyle]="fieldStyle(rowIndex, col)">
+          {{fieldValue(rowIndex, col)}}
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
