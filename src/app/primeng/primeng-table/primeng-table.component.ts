@@ -84,6 +84,9 @@ export class PrimengTableComponent implements OnInit {
 
   fieldStyle(rowIndex, col): object {
     const style = {width: col.width};
+    if (rowIndex === 0) {
+      style['border-top-color'] = '#ffffff';
+    }
     if (this.sales[rowIndex][col.field].span === 'col') {
       style['border-bottom-color'] = '#ffffff';
     }
