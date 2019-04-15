@@ -42,6 +42,7 @@ import {SubjectSimpleComponent} from './subject-simple/subject-simple.component'
 import {ToastModule} from 'primeng/toast';
 import { PrimengTableComponent } from './primeng-table/primeng-table.component';
 import { PrimengPickListComponent } from './primeng-pick-list/primeng-pick-list.component';
+import { BoardSignComponent } from './board-sign/board-sign.component';
 
 @NgModule({
   imports: [
@@ -88,7 +89,8 @@ import { PrimengPickListComponent } from './primeng-pick-list/primeng-pick-list.
     PromiseSampleComponent,
     SubjectSimpleComponent,
     PrimengTableComponent,
-    PrimengPickListComponent
+    PrimengPickListComponent,
+    BoardSignComponent
   ],
   entryComponents: [
     PrimengDialogComponent,

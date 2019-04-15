@@ -66,6 +66,12 @@
     "expanded": true
   },
   {
+    "label": "Input Group",
+    "icon": "fa fa-signing",
+    "data": "/sign",
+    "expanded": true
+  },
+  {
     "label": "Drag&Drop",
     "icon": "fa fa-globe",
     "data": "/drag",

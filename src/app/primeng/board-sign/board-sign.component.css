@@ -1,0 +1,42 @@
+.main-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  height: 380px;
+  border: 1px #607D8B solid;
+  border-radius: 8px;
+  box-shadow: 2px 2px 1px 1px gray;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: x-small;
+  padding-top: 16px;
+}
+
+.item-box {
+  margin-top: 16px;
+}
+
+.password-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sign-button {
+  background-color: yellowgreen;
+  border: 1px solid yellowgreen;
+}
+
+.item-box > p {
+  width: 205px;
+}
+
+:host /deep/ .ui-inputgroup {
+  display: flex;
+  width: 205px;
+}

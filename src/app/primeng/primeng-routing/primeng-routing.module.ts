@@ -12,6 +12,7 @@ import {PromiseSampleComponent} from '../promise-sample/promise-sample.component
 import {SubjectSimpleComponent} from '../subject-simple/subject-simple.component';
 import {PrimengTableComponent} from '../primeng-table/primeng-table.component';
 import {PrimengPickListComponent} from '../primeng-pick-list/primeng-pick-list.component';
+import {BoardSignComponent} from '../board-sign/board-sign.component';
 
 const routes: Routes = [
   {
@@ -65,6 +66,10 @@ const routes: Routes = [
       {
         path: 'pick',
         component: PrimengPickListComponent
+      },
+      {
+        path: 'sign',
+        component: BoardSignComponent
       }
     ]
   }

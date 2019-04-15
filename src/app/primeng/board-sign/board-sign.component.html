@@ -1,0 +1,54 @@
+<div class="main-box">
+  <div class="sign-box"  [ngPlural]="variety">
+    <div class="item-box">
+      <img src="assets/icon/user.png" width="32px" height="32px">
+    </div>
+
+    <ng-template ngPluralCase="=sign">
+      <div class="item-box">
+        <h1>Sign in to Board</h1>
+      </div>
+
+      <div class="item-box">
+        <label>Username or email address</label>
+        <div class="ui-inputgroup">
+          <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+          <input type="text" pInputText placeholder="Username" style="width: 100%">
+        </div>
+      </div>
+
+      <div class="item-box">
+        <div class="password-box">
+          <label>Password</label><a href="javascript:;" (click)="forgot()">Forgot password?</a>
+        </div>
+
+        <div class="ui-inputgroup">
+          <span class="ui-inputgroup-addon"><i class="pi pi-lock"></i></span>
+          <input type="text" pInputText placeholder="Password" style="width: 100%">
+        </div>
+      </div>
+
+      <div class="item-box">
+        <button pButton label="Sign in" iconPos="left" icon="pi pi-sign-in" [ngClass]="'sign-button'"></button>
+      </div>
+    </ng-template>
+
+    <ng-template ngPluralCase="=reset">
+      <div class="item-box">
+        <h1>Reset your password</h1>
+      </div>
+      <div class="item-box">
+        <p>
+          Enter you email address and we will send you a link to reset your password.
+        </p>
+        <div class="ui-inputgroup">
+          <input type="text" pInputText placeholder="Enter your email address" style="width: 100%">
+        </div>
+      </div>
+      <div class="item-box">
+        <button pButton label="Send email" iconPos="left" icon="pi pi-envelop" [ngClass]="'sign-button'"></button>
+      </div>
+    </ng-template>
+
+  </div>
+</div>
