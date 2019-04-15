@@ -1,5 +1,5 @@
 <div class="main-box">
-  <p-table #table [columns]="cols" [value]="sales" [resizableColumns]="true"  [scrollable]="true" [scrollHeight]="'550px'">
+  <p-table #table [columns]="cols" [value]="sales" [resizableColumns]="true"  [scrollable]="false" [scrollHeight]="'550px'" (onColResize)="handleColResize($event)">
     <ng-template pTemplate="colgroup" let-columns>
       <colgroup>
         <col *ngFor="let col of columns" [ngStyle]="{'width': col.width}">

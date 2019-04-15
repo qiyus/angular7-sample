@@ -1,5 +1,6 @@
 import {Component, OnInit, Renderer2, ViewChild} from '@angular/core';
 import {Table} from 'primeng/table';
+import {DomHandler} from 'primeng/api';
 
 @Component({
   selector: 'app-primeng-table',
@@ -42,16 +43,31 @@ export class PrimengTableComponent implements OnInit {
 
   handleColResize(event): void {
 
-    const colGroup = event.element.parentElement.parentElement.parentElement.firstElementChild.children;
     const cellIndex = +event.element.id;
     const nextIndex = cellIndex + 1;
-    for (let i = 0; i < this.cols.length; i++) {
-      if (cellIndex === i) {
-        this.cols[i].width = (+(this.cols[i].width.substring(0, this.cols[i].width.length - 2)) + event.delta) + 'px';
-      } else if (nextIndex === i) {
-        this.cols[i].width = (+(this.cols[i].width.substring(0, this.cols[i].width.length - 2)) - event.delta) + 'px';
+    this.cols[cellIndex].width = (+(this.cols[cellIndex].width.substring(0, this.cols[cellIndex].width.length - 2)) + event.delta) + 'px';
+    this.cols[nextIndex].width = (+(this.cols[nextIndex].width.substring(0, this.cols[nextIndex].width.length - 2)) - event.delta) + 'px';
+
+    if (this.table.scrollable) {
+      const scrollableView = event.element.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
+      const scrollableBodyTable = DomHandler.findSingle(scrollableView, 'table.ui-table-scrollable-body-table');
+      const scrollableHeaderTable = DomHandler.findSingle(scrollableView, 'table.ui-table-scrollable-header-table');
+      const scrollableFooterTable = DomHandler.findSingle(scrollableView, 'table.ui-table-scrollable-footer-table');
+      this.resizeColGroup(scrollableHeaderTable);
+      this.resizeColGroup(scrollableBodyTable);
+      this.resizeColGroup(scrollableFooterTable);
+    }
+  }
+
+  resizeColGroup(table): void {
+    if (table) {
+      const colGroup = table.children[0].nodeName === 'COLGROUP' ? table.children[0] : null;
+      for (let i = 0; i < this.cols.length; i++) {
+        if (colGroup) {
+          const col = colGroup.children[i];
+          col.style.width = this.cols[i].width;
+        }
       }
-      colGroup[i].style.width = this.cols[i].width;
     }
   }
 
