@@ -21,7 +21,9 @@
             {{col.field}}
           </th>
         </ng-container>
-
+      </tr>
+      <tr>
+        <th *ngFor="let col of columns" style="padding: 0"></th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-rowData let-columns="columns" let-rowIndex="rowIndex">
