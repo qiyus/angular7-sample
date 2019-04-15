@@ -11,6 +11,7 @@ import {PipeSampleComponent} from '../pipe-sample/pipe-sample.component';
 import {PromiseSampleComponent} from '../promise-sample/promise-sample.component';
 import {SubjectSimpleComponent} from '../subject-simple/subject-simple.component';
 import {PrimengTableComponent} from '../primeng-table/primeng-table.component';
+import {PrimengPickListComponent} from '../primeng-pick-list/primeng-pick-list.component';
 
 const routes: Routes = [
   {
@@ -60,6 +61,10 @@ const routes: Routes = [
       {
         path: 'table',
         component: PrimengTableComponent
+      },
+      {
+        path: 'pick',
+        component: PrimengPickListComponent
       }
     ]
   }

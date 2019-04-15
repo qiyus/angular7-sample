@@ -1,0 +1,9 @@
+.ui-helper-clearfix {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.pick-list-box {
+  height: 600px;
+}

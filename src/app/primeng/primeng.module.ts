@@ -22,7 +22,7 @@ import {
   FieldsetModule,
   MessageModule,
   MessagesModule,
-  PanelModule,
+  PanelModule, PickListModule,
   SplitButtonModule,
   TabViewModule,
   ToggleButtonModule
@@ -41,6 +41,7 @@ import {PromiseSampleComponent} from './promise-sample/promise-sample.component'
 import {SubjectSimpleComponent} from './subject-simple/subject-simple.component';
 import {ToastModule} from 'primeng/toast';
 import { PrimengTableComponent } from './primeng-table/primeng-table.component';
+import { PrimengPickListComponent } from './primeng-pick-list/primeng-pick-list.component';
 
 @NgModule({
   imports: [
@@ -65,7 +66,8 @@ import { PrimengTableComponent } from './primeng-table/primeng-table.component';
     MessageModule,
     SplitButtonModule,
     FieldsetModule,
-    ToastModule
+    ToastModule,
+    PickListModule
   ],
   declarations: [
     PrimengMainComponent,
@@ -85,7 +87,8 @@ import { PrimengTableComponent } from './primeng-table/primeng-table.component';
     PipeSampleComponent,
     PromiseSampleComponent,
     SubjectSimpleComponent,
-    PrimengTableComponent
+    PrimengTableComponent,
+    PrimengPickListComponent
   ],
   entryComponents: [
     PrimengDialogComponent,

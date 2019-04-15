@@ -49,7 +49,7 @@
   },
   {
     "label": "Message",
-    "icon": "fa fa-spinner",
+    "icon": "fa fa-rss",
     "data": "/message",
     "expanded": true
   },
@@ -57,6 +57,12 @@
     "label": "Fieldset",
     "icon": "fa fa-credit-card",
     "data": "/field",
+    "expanded": true
+  },
+  {
+    "label": "Pick List",
+    "icon": "fa fa-trello",
+    "data": "/pick",
     "expanded": true
   },
   {
@@ -72,11 +78,6 @@
   },
   {
     "label": "Upload",
-    "icon": "fa fa-globe",
-    "expanded": true
-  },
-  {
-    "label": "Block UI",
     "icon": "fa fa-globe",
     "expanded": true
   },
