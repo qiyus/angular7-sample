@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-board-sign',
@@ -7,16 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoardSignComponent implements OnInit {
 
-  variety = 'sign';
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   forgot(): void {
-    this.variety = 'reset';
-    return false;
+    this.router.navigate(['/primeng/reset'], {skipLocationChange: false});
   }
 
 }

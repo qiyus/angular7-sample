@@ -43,6 +43,7 @@ import {ToastModule} from 'primeng/toast';
 import { PrimengTableComponent } from './primeng-table/primeng-table.component';
 import { PrimengPickListComponent } from './primeng-pick-list/primeng-pick-list.component';
 import { BoardSignComponent } from './board-sign/board-sign.component';
+import { BoardResetPasswordComponent } from './board-reset-password/board-reset-password.component';
 
 @NgModule({
   imports: [
@@ -90,7 +91,8 @@ import { BoardSignComponent } from './board-sign/board-sign.component';
     SubjectSimpleComponent,
     PrimengTableComponent,
     PrimengPickListComponent,
-    BoardSignComponent
+    BoardSignComponent,
+    BoardResetPasswordComponent
   ],
   entryComponents: [
     PrimengDialogComponent,

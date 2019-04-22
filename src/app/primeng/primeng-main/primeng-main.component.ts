@@ -1,8 +1,6 @@
-import {Component, ComponentFactoryResolver, OnInit, Type, ViewChild, ViewContainerRef} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {TreeNode} from 'primeng/api';
 import {PrimeNgDataService} from '../primeng-data.service';
-import {PrimengDialogsComponent} from '../primeng-dialogs/primeng-dialogs.component';
-import {PrimengDynamicDialogsComponent} from '../primeng-dynamic-dialogs/primeng-dynamic-dialogs.component';
 import {Router} from '@angular/router';
 
 @Component({
@@ -29,7 +27,7 @@ export class PrimengMainComponent implements OnInit {
 
   onNodeSelected(event) {
     if (event.node.data) {
-      this.router.navigate(['/primeng' + event.node.data], {skipLocationChange: true});
+      this.router.navigate(['/primeng' + event.node.data], {skipLocationChange: false});
     }
   }
 }
