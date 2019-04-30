@@ -13,6 +13,7 @@ export class PrimengTableComponent implements OnInit {
 
   sales: any[];
   cols: any[];
+  selection: object;
 
   constructor(private renderer: Renderer2) {
   }
@@ -88,7 +89,7 @@ export class PrimengTableComponent implements OnInit {
       style['border-top-color'] = '#ffffff';
     }
     if (this.sales[rowIndex][col.field].span === 'col') {
-      style['border-bottom-color'] = '#ffffff';
+      style['border-top-color'] = '#ffffff';
     }
     return style;
   }

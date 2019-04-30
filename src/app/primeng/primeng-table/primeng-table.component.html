@@ -1,5 +1,7 @@
 <div class="main-box">
-  <p-table #table [columns]="cols" [value]="sales" [resizableColumns]="true" [scrollable]="true" [scrollHeight]="'150px'" (onColResize)="handleColResize($event)">
+  <p-table #table [columns]="cols" [value]="sales" [resizableColumns]="true" [scrollable]="true"
+           [scrollHeight]="'150px'" (onColResize)="handleColResize($event)" selectionMode="single"
+           [metaKeySelection]="true" selection="selection">
     <ng-template pTemplate="colgroup" let-columns>
       <colgroup>
         <col *ngFor="let col of columns" [ngStyle]="{'width': col.width}">
@@ -7,9 +9,9 @@
     </ng-template>
     <ng-template pTemplate="header" let-columns>
       <tr>
-        <th rowspan="3" pResizableColumn id="0">Brand</th>
-        <th rowspan="3" pResizableColumn id="1">Year</th>
-        <th colspan="4">State</th>
+        <th rowspan="3" pResizableColumn id="0" style="border-top-color: lightgray">Brand</th>
+        <th rowspan="3" pResizableColumn id="1" style="border-top-color: lightgray">Year</th>
+        <th colspan="4" style="border-top-color: lightgray">State</th>
       </tr>
       <tr>
         <th colspan="2" pResizableColumn id="3">Sales</th>
@@ -22,12 +24,9 @@
           </th>
         </ng-container>
       </tr>
-      <tr>
-        <th *ngFor="let col of columns" style="padding: 0"></th>
-      </tr>
     </ng-template>
     <ng-template pTemplate="body" let-rowData let-columns="columns" let-rowIndex="rowIndex">
-      <tr>
+      <tr [pSelectableRow]="rowData">
         <td *ngFor="let col of columns" [ngStyle]="fieldStyle(rowIndex, col)">
           {{fieldValue(rowIndex, col)}}
         </td>

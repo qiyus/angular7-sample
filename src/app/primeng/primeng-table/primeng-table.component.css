@@ -1,16 +1,29 @@
-:host /deep/ .ui-table .ui-table-thead > tr > th {
-  background: inherit;
-  border: 1px solid black;
-  background-color: lightgray !important;
-  padding: 0;
+:host /deep/ .main-box .ui-table .ui-table-thead > tr > th,
+:host /deep/ .main-box .ui-table .ui-table-tbody > tr > td {
+  border: 0;
+  background: none;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  line-height: 16px;
 }
 
-:host /deep/ .ui-table .ui-table-tbody > tr > td {
-  background: inherit;
-  border: 1px solid black;
-  padding: 0;
+:host /deep/ .main-box .ui-table .ui-table-thead > tr {
+  background-color: lightgray;
 }
 
-:host /deep/ .ui-table .ui-table-tbody > tr:nth-child(even) {
-  background-color: #ffffff;
+:host /deep/ .main-box .ui-table .ui-table-thead > tr > th:last-child,
+:host /deep/ .main-box .ui-table .ui-table-tbody > tr > td:last-child {
+  border-right: 0 none;
+}
+
+:host /deep/ .main-box .ui-table .ui-table-tbody > tr {
+  background-color: white;
+}
+
+:host /deep/ .main-box .ui-table-scrollable-header {
+  border: 1px solid black;
+}
+
+:host /deep/ .main-box .ui-table-scrollable-body {
+  border: 1px solid black;
 }
