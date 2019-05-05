@@ -2,101 +2,103 @@
   {
     "label": "Dialog",
     "icon": "fa fa-window-maximize",
-    "data": "/dialog",
+    "data": "dialog",
     "expanded": true
   },
   {
     "label": "Dynamic Dialog",
     "icon": "fa fa-object-ungroup",
-    "data": "/dynamic",
+    "data": "dynamic",
     "expanded": true
   },
   {
     "label": "TabView",
     "icon": "fa fa-columns",
-    "data": "/tab",
+    "data": "tab",
     "expanded": true
   },
   {
     "label": "Virtual Scroll",
     "icon": "fa fa-th",
-    "data": "/board",
+    "data": "board",
     "expanded": true
   },
   {
     "label": "Table Row Expansion",
     "icon": "fa fa-th-list",
-    "data": "/sprint",
+    "data": "sprint",
     "expanded": true
   },
   {
     "label": "Table Col Group",
     "icon": "fa fa-object-group",
-    "data": "/table",
+    "data": "table",
     "expanded": true
   },
   {
     "label": "Table Row Group",
     "icon": "fa fa-object-group",
-    "data": "/product",
+    "data": "product",
     "expanded": true
   },
   {
     "label": "CodeHighlighter",
     "icon": "fa fa-code",
-    "data": "/code",
+    "data": "code",
     "expanded": true
   },
   {
     "label": "Message",
-    "icon": "fa fa-rss",
-    "data": "/message",
+    "icon": "fa fa-commenting",
+    "data": "message",
     "expanded": true
   },
   {
     "label": "Fieldset",
     "icon": "fa fa-credit-card",
-    "data": "/field",
+    "data": "field",
     "expanded": true
   },
   {
     "label": "Pick List",
     "icon": "fa fa-trello",
-    "data": "/pick",
+    "data": "pick",
     "expanded": true
   },
   {
     "label": "Input Group",
     "icon": "fa fa-signing",
-    "data": "/sign",
+    "data": "sign",
     "expanded": true
   },
   {
     "label": "Terminal",
     "icon": "fa fa-bug",
-    "data": "/terminal",
+    "data": "terminal",
     "expanded": true
   },
   {
     "label": "Upload",
-    "icon": "fa fa-globe",
-    "data": "/upload",
+    "icon": "fa fa-cloud-upload",
+    "data": "upload",
     "expanded": true
   },
   {
     "label": "Drag&Drop",
-    "icon": "fa fa-globe",
-    "data": "/drag",
+    "icon": "fa fa-hand-grab-o",
+    "data": "drag",
     "expanded": true
   },
   {
     "label": "Tree Table",
-    "icon": "fa fa-globe",
+    "icon": "fa fa-tree",
+    "data": "tree",
     "expanded": true
   },
   {
     "label": "Validation",
-    "icon": "fa fa-globe",
+    "icon": "fa fa-check",
+    "data": "validation",
     "expanded": true
   }
 ]
