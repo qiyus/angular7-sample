@@ -19,7 +19,7 @@ import {
   CardModule,
   ChartModule,
   CodeHighlighterModule,
-  FieldsetModule,
+  FieldsetModule, FileUploadModule,
   MessageModule,
   MessagesModule,
   PanelModule, PickListModule,
@@ -46,6 +46,7 @@ import { BoardSignComponent } from './board-sign/board-sign.component';
 import { BoardResetPasswordComponent } from './board-reset-password/board-reset-password.component';
 import { PrimengTerminalComponent } from './primeng-terminal/primeng-terminal.component';
 import { KeepHtmlPipe } from './keep-html.pipe';
+import { PrimengFileUploadComponent } from './primeng-file-upload/primeng-file-upload.component';
 
 @NgModule({
   imports: [
@@ -72,7 +73,8 @@ import { KeepHtmlPipe } from './keep-html.pipe';
     FieldsetModule,
     ToastModule,
     PickListModule,
-    TerminalModule
+    TerminalModule,
+    FileUploadModule
   ],
   declarations: [
     PrimengMainComponent,
@@ -97,7 +99,8 @@ import { KeepHtmlPipe } from './keep-html.pipe';
     BoardSignComponent,
     BoardResetPasswordComponent,
     PrimengTerminalComponent,
-    KeepHtmlPipe
+    KeepHtmlPipe,
+    PrimengFileUploadComponent
   ],
   entryComponents: [
     PrimengDialogComponent,

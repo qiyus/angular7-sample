@@ -1,0 +1,7 @@
+:host /deep/ .ui-fileupload-choose .ui-button-icon-left {
+  display: none;
+}
+
+:host /deep/ .ui-fileupload-choose.ui-button-text-icon-left .ui-button-text {
+  padding: 0.429em 1em 0.429em 1em;
+}

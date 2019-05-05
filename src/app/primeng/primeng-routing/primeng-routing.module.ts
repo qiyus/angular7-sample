@@ -15,6 +15,7 @@ import {PrimengPickListComponent} from '../primeng-pick-list/primeng-pick-list.c
 import {BoardSignComponent} from '../board-sign/board-sign.component';
 import {BoardResetPasswordComponent} from '../board-reset-password/board-reset-password.component';
 import {PrimengTerminalComponent} from '../primeng-terminal/primeng-terminal.component';
+import {PrimengFileUploadComponent} from '../primeng-file-upload/primeng-file-upload.component';
 
 const routes: Routes = [
   {
@@ -80,6 +81,10 @@ const routes: Routes = [
       {
         path: 'terminal',
         component: PrimengTerminalComponent
+      },
+      {
+        path: 'upload',
+        component: PrimengFileUploadComponent
       }
     ]
   }

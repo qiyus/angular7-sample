@@ -78,6 +78,12 @@
     "expanded": true
   },
   {
+    "label": "Upload",
+    "icon": "fa fa-globe",
+    "data": "/upload",
+    "expanded": true
+  },
+  {
     "label": "Drag&Drop",
     "icon": "fa fa-globe",
     "data": "/drag",
@@ -85,16 +91,6 @@
   },
   {
     "label": "Tree Table",
-    "icon": "fa fa-globe",
-    "expanded": true
-  },
-  {
-    "label": "Upload",
-    "icon": "fa fa-globe",
-    "expanded": true
-  },
-  {
-    "label": "Progress bar",
     "icon": "fa fa-globe",
     "expanded": true
   },
