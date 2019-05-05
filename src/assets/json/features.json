@@ -72,6 +72,12 @@
     "expanded": true
   },
   {
+    "label": "Terminal",
+    "icon": "fa fa-bug",
+    "data": "/terminal",
+    "expanded": true
+  },
+  {
     "label": "Drag&Drop",
     "icon": "fa fa-globe",
     "data": "/drag",

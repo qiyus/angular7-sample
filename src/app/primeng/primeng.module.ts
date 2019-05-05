@@ -24,7 +24,7 @@ import {
   MessagesModule,
   PanelModule, PickListModule,
   SplitButtonModule,
-  TabViewModule,
+  TabViewModule, TerminalModule,
   ToggleButtonModule
 } from 'primeng/primeng';
 import {TaskCardComponent} from './task-card/task-card.component';
@@ -44,6 +44,8 @@ import { PrimengTableComponent } from './primeng-table/primeng-table.component';
 import { PrimengPickListComponent } from './primeng-pick-list/primeng-pick-list.component';
 import { BoardSignComponent } from './board-sign/board-sign.component';
 import { BoardResetPasswordComponent } from './board-reset-password/board-reset-password.component';
+import { PrimengTerminalComponent } from './primeng-terminal/primeng-terminal.component';
+import { KeepHtmlPipe } from './keep-html.pipe';
 
 @NgModule({
   imports: [
@@ -69,7 +71,8 @@ import { BoardResetPasswordComponent } from './board-reset-password/board-reset-
     SplitButtonModule,
     FieldsetModule,
     ToastModule,
-    PickListModule
+    PickListModule,
+    TerminalModule
   ],
   declarations: [
     PrimengMainComponent,
@@ -92,7 +95,9 @@ import { BoardResetPasswordComponent } from './board-reset-password/board-reset-
     PrimengTableComponent,
     PrimengPickListComponent,
     BoardSignComponent,
-    BoardResetPasswordComponent
+    BoardResetPasswordComponent,
+    PrimengTerminalComponent,
+    KeepHtmlPipe
   ],
   entryComponents: [
     PrimengDialogComponent,

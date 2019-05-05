@@ -14,6 +14,7 @@ import {PrimengTableComponent} from '../primeng-table/primeng-table.component';
 import {PrimengPickListComponent} from '../primeng-pick-list/primeng-pick-list.component';
 import {BoardSignComponent} from '../board-sign/board-sign.component';
 import {BoardResetPasswordComponent} from '../board-reset-password/board-reset-password.component';
+import {PrimengTerminalComponent} from '../primeng-terminal/primeng-terminal.component';
 
 const routes: Routes = [
   {
@@ -75,6 +76,10 @@ const routes: Routes = [
       {
         path: 'reset',
         component: BoardResetPasswordComponent
+      },
+      {
+        path: 'terminal',
+        component: PrimengTerminalComponent
       }
     ]
   }
