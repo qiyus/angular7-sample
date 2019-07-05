@@ -1,24 +1,40 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostBinding, OnInit} from '@angular/core';
 import {Hero} from '../hero';
 import {HeroService} from '../hero.service';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css'],
+    selector: 'app-dashboard',
+    templateUrl: './dashboard.component.html',
+    styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
-  heroes: Hero[] = [];
+    heroes: Hero[] = [];
+    searchKey: string;
+    searchCount = 0;
+    clear = 0;
 
-  constructor(private heroService: HeroService) {
-  }
+    constructor(private heroService: HeroService) {
+    }
 
-  ngOnInit() {
-    this.getHeroes();
-  }
+    @HostBinding('class') get themeClass() {
+        return 'theme-light';
+    }
 
-  getHeroes(): void {
-    this.heroService.getHeroes()
-      .subscribe(heroes => this.heroes = heroes.slice(1, 5));
-  }
+    ngOnInit() {
+        this.getHeroes();
+    }
+
+    getHeroes(): void {
+        this.heroService.getHeroes()
+            .subscribe(heroes => this.heroes = heroes.slice(1, 5));
+    }
+
+    onSearch(event: string): void {
+        this.searchKey = event;
+        this.searchCount++;
+        if (this.searchCount > 5) {
+            this.searchCount = 0;
+            this.clear++;
+        }
+    }
 }

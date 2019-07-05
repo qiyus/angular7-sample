@@ -1,0 +1,23 @@
+:host {
+    display: block;
+    border: 10px solid black;
+    background-color: #4ae6ef;
+}
+
+:host(:hover) {
+    display: block;
+    border: 10px solid yellowgreen;
+    background-color: #4addd33d;
+}
+
+:host-context(.theme-light) p {
+    background-color: #eef;
+}
+
+:host /deep/ p {
+    font-style: italic;
+}
+
+.count {
+    color: blue;
+}
