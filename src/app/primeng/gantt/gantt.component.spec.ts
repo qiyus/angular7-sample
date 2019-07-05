@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PrimengFileUploadComponent } from './primeng-file-upload.component';
+import { Gantt } from './gantt.component';
 
-describe('PrimengFileUploadComponent', () => {
-  let component: PrimengFileUploadComponent;
-  let fixture: ComponentFixture<PrimengFileUploadComponent>;
+describe('Gantt', () => {
+  let component: Gantt;
+  let fixture: ComponentFixture<Gantt>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PrimengFileUploadComponent ]
+      declarations: [ Gantt ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PrimengFileUploadComponent);
+    fixture = TestBed.createComponent(Gantt);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

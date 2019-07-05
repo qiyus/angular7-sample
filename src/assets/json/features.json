@@ -78,27 +78,9 @@
     "expanded": true
   },
   {
-    "label": "Upload",
+    "label": "Gantt",
     "icon": "fa fa-cloud-upload",
-    "data": "upload",
-    "expanded": true
-  },
-  {
-    "label": "Drag&Drop",
-    "icon": "fa fa-hand-grab-o",
-    "data": "drag",
-    "expanded": true
-  },
-  {
-    "label": "Tree Table",
-    "icon": "fa fa-tree",
-    "data": "tree",
-    "expanded": true
-  },
-  {
-    "label": "Validation",
-    "icon": "fa fa-check",
-    "data": "validation",
+    "data": "gantt",
     "expanded": true
   }
 ]

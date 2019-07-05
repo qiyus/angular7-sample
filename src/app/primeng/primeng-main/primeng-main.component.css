@@ -11,6 +11,6 @@
 
 .feature-box {
   margin-left: 1px;
-  width: 100%;
+  width: -webkit-calc(100% - 250px);
   height: 100%;
 }

@@ -1,0 +1,21 @@
+<div class="main-box">
+    <div class="gantt-box">
+        <table border="0" cellspacing="0" cellpadding="0">
+            <thead>
+            <tr>
+                <ng-container *ngFor="let m of month">
+                    <th [attr.colspan]="m.day.length" style="text-align: left;">{{m.month}}</th>
+                </ng-container>
+            </tr>
+            <tr>
+                <ng-container *ngFor="let m of month">
+                    <th *ngFor="let d of m.day" >{{d}}</th>
+                </ng-container>
+            </tr>
+            </thead>
+        </table>
+        <div class="bar" (click)="onClickBar()"></div>
+        <div class="selected-bar" *ngIf="isSelectedBar" (click)="onClickBar()"></div>
+        <div class="dragBar"></div>
+    </div>
+</div>

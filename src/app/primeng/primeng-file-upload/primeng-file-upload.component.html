@@ -1,9 +1,0 @@
-<div class="main-box">
-  <p-fileUpload #upload mode="basic" name="files" url="./upload.php" accept="application/pdf" maxFileSize="2000000"
-                customUpload="true" (uploadHandler)="btnUploadOnClick($event)" chooseLabel="Browse..."
-                (onUpload)="onBasicUpload($event)" auto="true">
-  </p-fileUpload>
-  <ul>
-    <li *ngFor="let file of files">{{file.name}} - {{file.size}} bytes</li>
-  </ul>
-</div>

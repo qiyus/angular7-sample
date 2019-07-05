@@ -1,0 +1,51 @@
+.gantt-box {
+    height: 100%;
+    overflow: auto;
+    font-family: Helvetica Neue, Helvetica, Arial;
+    font-size: 14px;
+    color:#333;
+    border-left: 1px solid #B4B4B4;
+    border-top: 1px solid #B4B4B4;
+    background: white url("../../../assets/icon/background.png") local;
+    background-size: 20px 40px;
+    position: relative;
+    user-select: none;
+}
+
+.gantt-box > table > thead > tr > th {
+    min-width: 20px;
+    max-width: 20px;
+    line-height: 19px;
+    border: none;
+    border-right: 1px solid #B4B4B4;
+    border-bottom: 1px solid #B4B4B4;
+    background: #EDEDED;
+}
+
+div .bar {
+    position: absolute;
+    top: 103px;
+    left: 100px;
+    width: 200px;
+    height: 14px;
+    background-color: #FCE074;
+}
+
+div .selected-bar {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 200px;
+    height: 14px;
+    background-color: #CAAE42;
+}
+
+div .dragBar {
+    position: absolute;
+    border: 2px solid black;
+    top: 100px;
+    left: 100px;
+    width: 200px;
+    height: 20px;
+    background-color: transparent;
+}
